@@ -14,41 +14,50 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css" />
-    <title>markaroone Studios</title>
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <title>markaroone - STUDIOS</title>
   </head>
   <body>
     <!-- ********************************************* -->
     <!-- HEADER -->
     <!-- ********************************************* -->
-    <header>
+    <header class="header">
       <div class="header-texts">
         <div>
           <h2>
             <a href="#">markaroone<span> {STUDIOS}</span></a>
           </h2>
         </div>
-        <nav>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
           <ul class="main-nav-list">
             <li>
-              <a href="#">Home</a>
+              <a class="main-nav-link" href="#">Home</a>
             </li>
             <li>
-              <a href="#">Gallery</a>
+              <a class="main-nav-link" href="#">Collections</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a class="main-nav-link" href="about.html" target="_blank"
+                >About</a
+              >
             </li>
-            <li>
-              <a href="#">Contact</a>
+            <li class="nav-cta">
+              <a class="main-nav-link" href="booking.html" target="_blank"
+                >Book Now</a
+              >
             </li>
           </ul>
         </nav>
+
+        <!-- Menu icon -->
+        <button class="btn-mobile-nav">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
       </div>
-      <img
-        class="header-img"
-        src="img/francesco-cantinelli-6xsotTecOj4-unsplash.jpg"
-        alt=""
-      />
     </header>
 
     <!-- ********************************************* -->
@@ -59,25 +68,25 @@
       <!-- HERO - SECTION -->
       <!-- ********************************************* -->
       <section class="hero-section">
-        <div class="hero">
+        <div class="hero container">
           <div class="hero-text-box">
             <h1 class="heading-primary">
               We don't take pictures. We capture memories that last forever.
             </h1>
 
             <p>
-              We make you special moments live for a lifetime. Lorem ipsum dolor
-              sit amet consectetur adipisicing.
+              We make your special moments live for a lifetime. Tell us what you
+              love and let's make it happen
             </p>
 
-            <a href="#cta" class="btn">Let us talk</a>
+            <a href="#cta" class="btn">Let's talk</a>
           </div>
 
           <div class="hero-img-box">
             <img
               class="hero-img"
-              src="img/gian-cescon-00ByEXKcSkA-unsplash.jpg"
-              alt=""
+              src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1288&q=80"
+              alt="woman walking in white sand during daytime photo"
             />
           </div>
         </div>
@@ -87,114 +96,124 @@
       <!-- COLLECTION - SECTION -->
       <!-- ********************************************* -->
       <section class="collection-section">
-        <div class="bg-color-1"></div>
+        <!-- <div class="bg-color-1" role="img" aria-label="background design"></div> -->
         <!-- <div class="bg-color-2"></div> -->
         <div class="collection container">
-          <h2>COLLECTIONS</h2>
+          <h2 class="collection-title">Collections &mdash;</h2>
 
-          <!-- Wedding -->
-          <div class="photo-class section-padding-right">
-            <img
-              class="clip-right"
-              src="img/samantha-gades-RHAtRIT3-CE-unsplash.jpg"
-              alt=""
-            />
-            <!-- Wedding -->
-            <div class="section-texts">
-              <h3>Wedding</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                ex qui, a nesciunt laboriosam accusantium doloribus fuga cum
-                asperiores quod.
-              </p>
-
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <span>
-                <a class="gallery-link" href="#">&rarr; Wedding Gallery</a>
-              </span>
+          <div class="collection-grid">
+            <!-- Wedding - Img -->
+            <div class="collection-img-box">
+              <img
+                class="collection-img"
+                src="https://images.unsplash.com/photo-1595407753234-0882f1e77954?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
+                alt="bride and groom standing beside brown wooden wall photo"
+              />
             </div>
-          </div>
 
-          <!-- Interior -->
-          <div class="photo-class section-padding-left">
-            <div class="section-texts">
-              <h3>Interior</h3>
+            <!-- Wedding - Text -->
+            <div class="collection-text-box">
+              <h3>WEDDING</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                ex qui, a nesciunt laboriosam accusantium doloribus fuga cum
-                asperiores quod.
-              </p>
-              <p>Eos dolor officiis sint impedit vitae nostrum</p>
-              <span>
-                <a class="gallery-link" href="#">&rarr; Interior Gallery</a>
-              </span>
-            </div>
-            <img
-              class="clip-left"
-              src="img/spacejoy-KSfe2Z4REEM-unsplash.jpg"
-              alt=""
-            />
-          </div>
-
-          <!-- Fashion -->
-          <div class="photo-class section-padding-right">
-            <img
-              class="clip-right"
-              src="img/aviv-rachmadian-7F7kEHj72MQ-unsplash.jpg"
-              alt=""
-            />
-            <div class="section-texts">
-              <h3>Fashion</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                ex qui, a nesciunt laboriosam accusantium doloribus fuga cum
-                asperiores quod.
-              </p>
-
-              <p>Dolorem totam rem illum odit provident natus corporis.</p>
-              <span>
-                <a class="gallery-link" href="#">&rarr; Fashion Gallery</a>
-              </span>
-            </div>
-          </div>
-
-          <!-- Portrait -->
-          <div class="photo-class section-padding-left">
-            <div class="section-texts">
-              <h3>Portrait</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                ex qui, a nesciunt laboriosam accusantium doloribus fuga cum
-                asperiores quod.
-              </p>
-
-              <p>
-                Quas rerum sed numquam voluptatem eaque beatae architecto magni.
+                Emotive images that not only remind you of how it all looked,
+                but how it truly felt to celebrate your wedding day. Images
+                designed to stand the test of time, bringing the mood, the
+                energy and atmosphere to life.
               </p>
               <span>
-                <a class="gallery-link" href="#">&rarr; Portraits Gallery</a>
+                <a class="gallery-link" href="gallery-wedding.html"
+                  >SEE WEDDING GALLERY</a
+                >
               </span>
             </div>
 
-            <img
-              class="clip-left"
-              src="img/hong-nguyen-J4TEzb9mb3A-unsplash.jpg"
-              alt=""
-            />
+            <!-- Prints - Text -->
+            <div class="collection-text-box">
+              <h3>PRINTS</h3>
+              <p>
+                When looking at an extraordinary landscape, there are no
+                questions, no answers, no desires, no plans, no worries, no
+                past, no present, no future; there is only a deep silence, only
+                a glance.
+              </p>
+              <span>
+                <a
+                  class="gallery-link"
+                  href="gallery-prints.html"
+                  target="_blank"
+                  >SEE PRINTS GALLERY</a
+                >
+              </span>
+            </div>
+
+            <!-- Prints - Img-->
+            <div class="collection-img-box">
+              <img
+                class="collection-img"
+                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
+                alt="Boathouse on a mountain lake"
+              />
+            </div>
+
+            <!-- Fashion - Img -->
+            <div class="collection-img-box">
+              <img
+                class="collection-img"
+                src="https://images.unsplash.com/photo-1549298222-1c31e8915347?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
+                alt="Image of a magazine"
+              />
+            </div>
+
+            <!-- Fashion - Text -->
+            <div class="collection-text-box">
+              <h3>FASHION</h3>
+              <p>
+                When you think of fashion photography,it's a dream. It's like we
+                all want to be those women. We want to wear those dresses.
+              </p>
+
+              <span>
+                <a class="gallery-link" href="#">SEE FASHION GALLERY</a>
+              </span>
+            </div>
+
+            <!-- Portrait - Text -->
+            <div class="collection-text-box">
+              <h3>PORTRAIT</h3>
+              <p>
+                I always like to meet the people I’m going to photograph. I need
+                to have a conversation. I need to feel a vibe. I need to see
+                what’s going on in the person. I’m not just interested in
+                physical beauty. I really need a personality.
+              </p>
+
+              <span>
+                <a class="gallery-link" href="#">SEE PORTRAITS GALLERY</a>
+              </span>
+            </div>
+
+            <!-- Portrait - Img -->
+            <div class="collection-img-box">
+              <img
+                class="collection-img"
+                src="https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
+                alt="man sitting near gray steel roller shutters during daytime photo"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ********************************************* -->
-      <!-- FILLER TEXT - SECTION -->
+      <!-- FILLER - SECTION -->
       <!-- ********************************************* -->
       <section class="filler-text-section">
         <div class="filler-text container">
-          <blockquote>
+          <h2>
             "We don’t photograph what we see, we photograph how we feel about
             what we see."
-          </blockquote>
-          <p>&mdash; Mark Christian</p>
+          </h2>
+          <p>&mdash; Mark Aroone</p>
         </div>
       </section>
 
@@ -202,14 +221,14 @@
       <!-- FAQ - SECTION -->
       <!-- ********************************************* -->
       <section class="faq-section">
-        <h2>FAQ</h2>
+        <h3>Frequently Asked Questions</h3>
         <div class="faq container">
           <div class="faq-wrapper">
             <!-- FAQ 1 -->
             <div class="faq-container close">
               <p class="faq-number">01</p>
               <p class="faq-header">
-                Lorem ipsum dolor sit amet, consectetur adipisicing?
+                We love your work, what is the next step?
               </p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -228,10 +247,9 @@
 
               <div class="faq-hidden">
                 <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Eaque aut dolorem nesciunt commodi eum deleniti non quisquam
-                  vitae, maiores at dolores amet autem laborum maxime aperiam
-                  repudiandae nisi doloribus optio.
+                  Awesome! I take bookings on a first-come, first serve basis.
+                  So if you like what you see, drop me a message via the contact
+                  page to check my availability and get the convo started.
                 </p>
               </div>
             </div>
@@ -239,9 +257,7 @@
             <!-- FAQ 2 -->
             <div class="faq-container close">
               <p class="faq-number">02</p>
-              <p class="faq-header">
-                Lorem ipsum dolor sit amet, consectetur adipisicing?
-              </p>
+              <p class="faq-header">What are your travel costs?</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="faq-icon"
@@ -259,10 +275,11 @@
 
               <div class="faq-hidden">
                 <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Eaque aut dolorem nesciunt commodi eum deleniti non quisquam
-                  vitae, maiores at dolores amet autem laborum maxime aperiam
-                  repudiandae nisi doloribus optio.
+                  I work all over the Philippines and internationally so am used
+                  to travelling all over. Don't worry, like my beer, I keep it
+                  cheap. For weddings 100 km or more from Manila, PH you may
+                  need to cover my travel and accommodation. This will be agreed
+                  upon booking and all travel arrangements are booked by myself.
                 </p>
               </div>
             </div>
@@ -270,9 +287,7 @@
             <!-- FAQ 3 -->
             <div class="faq-container close">
               <p class="faq-number">03</p>
-              <p class="faq-header">
-                Lorem ipsum dolor sit amet, consectetur adipisicing?
-              </p>
+              <p class="faq-header">Can we meet before the big day?</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="faq-icon"
@@ -290,10 +305,9 @@
 
               <div class="faq-hidden">
                 <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Eaque aut dolorem nesciunt commodi eum deleniti non quisquam
-                  vitae, maiores at dolores amet autem laborum maxime aperiam
-                  repudiandae nisi doloribus optio.
+                  Sure. I am always game to meet new friends over a beer or two.
+                  If you are ever in Manila, drop me a line. For those further
+                  afield, we can sink our beers over a Zoom sesh.
                 </p>
               </div>
             </div>
@@ -301,9 +315,7 @@
             <!-- FAQ 4 -->
             <div class="faq-container close">
               <p class="faq-number">04</p>
-              <p class="faq-header">
-                Lorem ipsum dolor sit amet, consectetur adipisicing?
-              </p>
+              <p class="faq-header">Do you take family pics too?</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="faq-icon"
@@ -321,16 +333,175 @@
 
               <div class="faq-hidden">
                 <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Eaque aut dolorem nesciunt commodi eum deleniti non quisquam
-                  vitae, maiores at dolores amet autem laborum maxime aperiam
-                  repudiandae nisi doloribus optio.
+                  If you want them, I got you covered. Yeah, they may not be the
+                  coolest or most creative shots ever but for me, they are the
+                  legacy photos your future family will cherish. Ahead of your
+                  wedding, I will send across a call sheet of the day to
+                  finalise all the details and special requests.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- ********************************************* -->
+      <!-- CTA - SECTION -->
+      <!-- ********************************************* -->
+      <section id="cta" class="cta-section">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="cta-header">GET IN TOUCH</h2>
+
+              <p>
+                How lovely to know that you’re considering us to capture a
+                wonderful memory! We would love to discuss your ideas with you!
+              </p>
+
+              <form class="cta-form" action="cta-form" action="#">
+                <!-- First Name -->
+                <div class="form-first-name">
+                  <!-- <label for="first-name">First Name</label>
+                    <input
+                      id="first-name"
+                      type="text"
+                      placeholder="Juan"
+                      required
+                    /> -->
+                  <label for="first-name"></label>
+                  <input
+                    id="first-name"
+                    type="text"
+                    placeholder="First Name"
+                    required
+                  />
+                </div>
+
+                <!-- Last Name -->
+                <div class="form-last-name">
+                  <!-- <label for="last-name">Last Name</label>
+                    <input
+                      id="last-name"
+                      type="text"
+                      placeholder="Dela Cruz"
+                      required
+                    /> -->
+                  <label for="last-name"></label>
+                  <input
+                    id="last-name"
+                    type="text"
+                    placeholder="Last Name"
+                    required
+                  />
+                </div>
+
+                <!-- Contact No. -->
+                <div class="form-contact-no">
+                  <!-- <label for="contact-no">Contact No.</label>
+                    <input
+                      id="contact-no"
+                      type="tel"
+                      placeholder="0910 234 5678"
+                      required
+                    /> -->
+                  <label for="contact-no"></label>
+                  <input
+                    id="contact-no"
+                    type="tel"
+                    placeholder="Contact No."
+                    required
+                  />
+                </div>
+
+                <!-- Email -->
+                <div class="form-email">
+                  <!-- <label for="email">Email</label>
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="juan.delacruz@email.com"
+                      required
+                    /> -->
+                  <label for="email"></label>
+                  <input id="email" type="email" placeholder="Email" required />
+                </div>
+
+                <!-- Message -->
+                <div class="form-message">
+                  <!-- <label for="message">Your message</label> -->
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Your Message"
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Send</button>
+              </form>
+            </div>
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="woman under tree during daytime photo"
+            ></div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- ********************************************* -->
+    <!-- FOOTER-->
+    <!-- ********************************************* -->
+    <footer>
+      <h2>markaroone.</h2>
+
+      <div class="footer-left">
+        <div class="footer-email">
+          <a href="mailto:insertemailhere@xyz.com">markaroone@gmail.com</a>
+          <a href="mailto:insertemailhere@xyz.com">@markaroone.ph</a>
+        </div>
+
+        <div class="footer-socmed">
+          <!-- Facebook Icon -->
+          <a href="https://www.facebook.com/" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+
+          <!-- Behance Icon -->
+          <a href="https://www.behance.net" target="_blank">
+            <ion-icon name="logo-behance"></ion-icon>
+          </a>
+
+          <!-- Twitter Icon -->
+          <a href="https://twitter.com/" target="_blank">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div>
+          <p>623 Harrison St., 2nd Floor, San Francisco, CA 94107</p>
+          <p>023-123-098</p>
+          <p>+63910123456</p>
+        </div>
+        <p class="footer-copyright">
+          &copy; markaroone photography &mdash; 2022
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
