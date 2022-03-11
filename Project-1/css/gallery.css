@@ -119,6 +119,11 @@ header {
   border-bottom: 4px solid #000;
 }
 
+.main-nav-list a:visited,
+.main-nav-list a:active {
+  color: #222;
+}
+
 /**********************************/
 /* MAIN */
 /**********************************/
