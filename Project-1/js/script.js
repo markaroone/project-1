@@ -1,12 +1,14 @@
 "use strict";
 
 // For Mobile Nav
-const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector(".header");
+
 const faqAccordionEl = document.querySelector(".faq-container");
 
-btnNavEl.addEventListener("click", function () {
-  headerEl.classList.toggle("nav-open");
+const toggleButtonEl = document.querySelector(".toggle-button");
+const navBarLinksEl = document.querySelector(".navbar-links");
+
+toggleButtonEl.addEventListener("click", () => {
+  navBarLinksEl.classList.toggle("active");
 });
 
 faqAccordionEl.addEventListener("click", function () {
