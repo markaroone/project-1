@@ -12,5 +12,5 @@ toggleButtonEl.addEventListener("click", () => {
 });
 
 faqAccordionEl.addEventListener("click", function () {
-  faqAccordionEl.classList.toggle("close");
+  faqAccordionEl.classList.toggle("open");
 });

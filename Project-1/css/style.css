@@ -351,13 +351,13 @@ img {
 .faq-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  width: 600px;
   justify-items: center;
   gap: 32px;
 }
 
 .faq-container {
-  width: 100%;
+  /* width: 100%; */
   padding: 24px;
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -387,10 +387,6 @@ img {
 
 .faq-hidden {
   grid-column: 2;
-  display: block;
-}
-
-.close .faq-hidden {
   display: none;
 }
 
@@ -401,10 +397,10 @@ img {
 
 /* OPEN ACCORDION */
 .open {
-  border-top: 4px solid #2f2f28;
+  border-top: 5px solid #2f2f28;
 }
 
-.open .hidden-box {
+.open .faq-hidden {
   display: block;
 }
 
