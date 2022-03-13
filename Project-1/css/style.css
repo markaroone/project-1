@@ -144,12 +144,12 @@ img {
   font-size: 20px;
   line-height: 1.4;
   letter-spacing: 1.4px;
-  margin-bottom: 96px;
+  margin-bottom: 72px;
 }
 
 .hero-text-box a:link,
 .hero-text-box a:visited {
-  padding: 14px 48px;
+  padding: 14px 32px;
   color: #222;
   font-size: 18px;
   font-weight: 500;
