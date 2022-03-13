@@ -321,7 +321,7 @@
   /* FAQ - SECTION */
   /**********************************/
   .faq-wrapper {
-    width: 100%;
+    width: 524px;
   }
 
   /**********************************/
@@ -329,11 +329,11 @@
   /**********************************/
 
   .cta-section {
-    padding: 180px 32px;
+    padding: 180px 64px;
   }
   .cta {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1.3fr;
   }
 
   .cta-img-box {

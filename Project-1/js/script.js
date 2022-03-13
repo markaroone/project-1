@@ -1,9 +1,6 @@
 "use strict";
 
-// For Mobile Nav
-
-const faqAccordionEl = document.querySelector(".faq-container");
-
+const faqAccordionEl = document.querySelectorAll(".faq-accordion");
 const toggleButtonEl = document.querySelector(".toggle-button");
 const navBarLinksEl = document.querySelector(".navbar-links");
 
@@ -11,6 +8,8 @@ toggleButtonEl.addEventListener("click", () => {
   navBarLinksEl.classList.toggle("active");
 });
 
-faqAccordionEl.addEventListener("click", function () {
-  faqAccordionEl.classList.toggle("open");
-});
+for (const [key, val] of faqAccordionEl.entries()) {
+  faqAccordionEl[key].addEventListener("click", () => {
+    faqAccordionEl[key].classList.toggle("open");
+  });
+}
