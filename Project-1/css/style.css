@@ -6,6 +6,7 @@
 
 html {
   font-size: 16px;
+  /* scroll-behavior: smooth;  */
 }
 
 body {
@@ -385,7 +386,7 @@ img {
   display: grid;
   grid-template-columns: 2fr 1fr;
   background-color: #eee;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   color: #222;
 }
@@ -461,7 +462,7 @@ img {
 .cta-form button {
   min-width: 50px;
   max-width: 65%;
-  border: 3px solid black;
+  border: 3px solid #222;
   background-color: #222;
   padding: 12px 0;
   font-family: inherit;
