@@ -97,65 +97,6 @@
 /* MOBILE */
 
 @media only screen and (max-width: 960px) {
-  /* Mobile Navigation */
-
-  /* .btn-mobile-nav {
-    display: block;
-    z-index: 99999;
-  }
-
-  .main-nav {
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    transform: translateX(100%);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    transition: all 300ms ease-in;
-
-    Hide navigation
-    display: none;
-
-    Hide it visually
-    opacity: 0;
-
-    Make it inaccessible to mouse and keyboard
-    pointer-events: none;
-
-    Hide from screen readers
-    visibility: hidden;
-  }
-
-  .nav-open .main-nav {
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-    transform: translateX(0);
-  }
-
-  .nav-open .icon-mobile-nav[name="close-outline"] {
-    display: block;
-  }
-
-  .nav-open .icon-mobile-nav[name="menu-outline"] {
-    display: none;
-  }
-
-  .main-nav-list {
-    flex-direction: column;
-  }
-
-  .main-nav-list a:link {
-    font-size: 32px;
-  } */
-
   /**********************************/
   /* MOBILE NAV */
   /**********************************/
@@ -414,55 +355,6 @@
     padding: 0 32px;
   }
 
-  /**********************************/
-  /* COLLECTION - SECTION */
-  /**********************************/
-
-  .collection-section {
-    padding-bottom: 72px;
-  }
-
-  /**********************************/
-  /* FILLER - SECTION */
-  /**********************************/
-
-  .filler-text-section {
-    padding: 96px 64px;
-  }
-
-  /**********************************/
-  /* FAQ - SECTION */
-  /**********************************/
-
-  .faq-section {
-    width: 100%;
-    padding: 72px 48px;
-  }
-
-  /**********************************/
-  /* CTA - SECTION */
-  /**********************************/
-
-  .cta-section {
-    padding: 96px 32px;
-  }
-
-  .form-first-name,
-  .form-last-name,
-  .form-contact-no,
-  .form-email {
-    grid-column: 1 / 3;
-  }
-}
-
-@media only screen and (max-width: 658px) {
-  /**********************************/
-  /* HEADER */
-  /**********************************/
-
-  /**********************************/
-  /* HERO - SECTION */
-  /**********************************/
   .hero-text-box h1 {
     font-size: 36px;
   }
@@ -470,6 +362,10 @@
   /**********************************/
   /* COLLECTION - SECTION */
   /**********************************/
+
+  .collection-section {
+    padding-bottom: 72px;
+  }
 
   .collection-title {
     font-size: 48px;
@@ -482,6 +378,11 @@
   /**********************************/
   /* FILLER - SECTION */
   /**********************************/
+
+  .filler-text-section {
+    padding: 96px 64px;
+  }
+
   .filler-text h2 {
     font-size: 28px;
   }
@@ -495,18 +396,40 @@
   /**********************************/
   /* FAQ - SECTION */
   /**********************************/
+
+  .faq-section {
+    width: 100%;
+    padding: 72px 48px;
+  }
+
   .faq-section h3 {
     font-size: 28px;
+  }
+
+  .faq-wrapper {
+    width: 100%;
   }
 
   /**********************************/
   /* CTA - SECTION */
   /**********************************/
+
+  .cta-section {
+    padding: 96px 32px;
+  }
+
   .cta-text-box {
     padding: 36px 52px 52px 52px;
   }
 
   .cta-text-box h2 {
     font-size: 32px;
+  }
+
+  .form-first-name,
+  .form-last-name,
+  .form-contact-no,
+  .form-email {
+    grid-column: 1 / 3;
   }
 }

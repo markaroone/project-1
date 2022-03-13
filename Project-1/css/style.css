@@ -12,7 +12,6 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1;
   font-weight: 400;
-  /* overflow-x: hidden; */
 }
 
 img {
@@ -33,11 +32,7 @@ img {
 /**********************************/
 
 .navbar {
-  /* display: flex;
-  flex-direction: column; */
   padding: 32px 48px 80px 48px;
-  /* min-height: 128px; */
-  /* position: relative; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,33 +60,6 @@ img {
 /* NAVIGATION */
 /**********************************/
 
-/* .navbar {
-}
-
-.main-nav-list li {
-}
-
-.main-nav-list a:link {
-  padding-top: 16px;
-  font-size: 18px;
-  display: inline-block;
-  text-decoration: none;
-  color: #000;
-  transition: all 300ms;
-  border-bottom: 4px solid transparent;
-  letter-spacing: 1.2px;
-}
-
-.main-nav-list a:hover {
-  border-bottom: 4px solid #000;
-}
-
-.main-nav-list a:visited,
-.main-nav-list a:active {
-  border-bottom: 4px solid #000;
-  color: #000;
-} */
-
 .navbar-links ul {
   display: flex;
   gap: 32px;
@@ -106,10 +74,8 @@ img {
   color: #222;
   font-size: 18px;
   font-weight: 600;
-  /* padding: 0 16px; */
   display: block;
   transition: all 300ms;
-  /* padding: 8px 16px; */
   border-bottom: 4px solid transparent;
   letter-spacing: 1.2px;
   padding-top: 16px;
@@ -181,28 +147,28 @@ img {
 
 .hero-text-box a:link {
   padding: 14px 48px;
-  color: #000;
+  color: #222;
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
 
   transition: all 300ms ease;
-  border: 3px solid #000;
+  border: 3px solid #222;
   color: #fff;
-  background-color: #000;
+  background-color: #222;
 }
 
 .hero-text-box a:hover {
-  border: 3px solid #000;
+  border: 3px solid #222;
   color: #222;
   background-color: #fff;
 }
 
 .hero-text-box a:visited,
 .hero-text-box a:active {
-  /* border: 4px solid #000; */
+  /* border: 4px solid #222; */
   color: #fff;
-  background-color: #000;
+  background-color: #222;
 }
 
 /**********************************/
@@ -382,6 +348,11 @@ img {
   width: 24px;
   height: 24px;
   stroke: #222;
+  /* transform: rotate(180deg); */
+}
+
+.invert-icon .faq-icon {
+  transform: rotate(180deg);
 }
 
 .faq-hidden {
@@ -583,6 +554,6 @@ footer a {
 
 /* ionicons */
 ion-icon {
-  font-size: 32px;
-  --ionicon-stroke-width: 36px;
+  font-size: 28px;
+  --ionicon-stroke-width: 2px;
 }
