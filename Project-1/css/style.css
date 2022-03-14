@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -25,6 +25,7 @@ img {
 
 .container {
   max-width: 1600px;
+  /* max-width: 90%; */
   margin: 0 auto;
 }
 
@@ -40,7 +41,7 @@ img {
 }
 
 .navbar h2 {
-  font-size: 64px;
+  font-size: 6.4rem;
   letter-spacing: 1.8px;
   font-weight: 700;
 }
@@ -53,7 +54,7 @@ img {
 .navbar h2 span {
   letter-spacing: 1;
   color: #aaa;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
@@ -73,7 +74,7 @@ img {
 .navbar-links li a {
   text-decoration: none;
   color: #222;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
   display: block;
   transition: all 300ms;
@@ -132,7 +133,7 @@ img {
 }
 
 .hero-text-box h1 {
-  font-size: 72px;
+  font-size: 7.2rem;
   line-height: 1;
   letter-spacing: 1.1;
   margin-bottom: 42px;
@@ -141,7 +142,7 @@ img {
 
 .hero-text-box p {
   /* padding: 0 128px 0 0; */
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 1.4;
   letter-spacing: 1.4px;
   margin-bottom: 72px;
@@ -151,7 +152,7 @@ img {
 .hero-text-box a:visited {
   padding: 14px 32px;
   color: #222;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
   text-decoration: none;
 
@@ -187,7 +188,7 @@ img {
   position: absolute;
   top: 0;
   transform: translateY(-50%);
-  font-size: 96px;
+  font-size: 9.6rem;
   font-weight: 600;
   padding: 0 32px;
   letter-spacing: 6.4px;
@@ -213,7 +214,7 @@ img {
 }
 
 .collection-text-box h3 {
-  font-size: 36px;
+  font-size: 3.6rem;
   font-weight: 700;
   letter-spacing: 1.8px;
   margin-bottom: 28px;
@@ -226,7 +227,7 @@ img {
 
 .collection-text-box p,
 .collection-text-box a {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.4;
 }
 
@@ -268,7 +269,7 @@ img {
 }
 
 .filler-text h2 {
-  font-size: 72px;
+  font-size: 7.2rem;
   font-weight: 600;
   margin-bottom: 36px;
   line-height: 1.2;
@@ -276,7 +277,7 @@ img {
 
 .filler-text p {
   /* font-style: italic; */
-  font-size: 32px;
+  font-size: 3.2rem;
   text-align: right;
 }
 
@@ -303,7 +304,7 @@ img {
 
 .faq-section h3 {
   font-weight: 600;
-  font-size: 48px;
+  font-size: 4.8rem;
   color: #222;
 }
 
@@ -328,13 +329,13 @@ img {
 
 .faq-number,
 .faq-header {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
 .faq-number {
   color: #a3a68d;
-  font-size: 36px;
+  font-size: 3.6rem;
 }
 
 .faq-icon {
@@ -397,13 +398,13 @@ img {
 
 .cta-text-box h2 {
   font-weight: 600;
-  font-size: 48px;
+  font-size: 4.8rem;
   margin-bottom: 28px;
 }
 
 .cta-text-box p {
   margin-bottom: 42px;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.2;
   letter-spacing: 1.4px;
 }
@@ -433,7 +434,7 @@ img {
   border-bottom: 2px solid #222;
   background-color: transparent;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 1.6rem;
   /* font-weight: 500; */
   width: 100%;
 }
@@ -442,7 +443,7 @@ img {
 .cta-form textarea::placeholder {
   color: #222;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 .cta-form textarea {
@@ -466,7 +467,7 @@ img {
   background-color: #222;
   padding: 12px 0;
   font-family: inherit;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
   color: #fff;
   transition: all 300ms ease;
