@@ -1,3 +1,7 @@
+:root {
+  --secondary-color: #222;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +17,7 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1;
   font-weight: 400;
+  color: var(--secondary-color);
 }
 
 img {
@@ -75,7 +80,7 @@ img {
 
 .navbar-links li a {
   text-decoration: none;
-  color: #222;
+  color: var(--secondary-color);
   font-size: 1.8rem;
   font-weight: 600;
   display: block;
@@ -87,7 +92,7 @@ img {
 }
 
 .navbar-links li a:hover {
-  border-bottom: 4px solid #222;
+  border-bottom: 4px solid var(--secondary-color);
 }
 
 .toggle-button {
@@ -106,7 +111,7 @@ img {
 .toggle-button .bar {
   height: 3px;
   width: 100%;
-  background-color: #222;
+  background-color: var(--secondary-color);
 }
 
 /**********************************/
@@ -153,21 +158,21 @@ img {
 .hero-text-box a:link,
 .hero-text-box a:visited {
   padding: 14px 32px;
-  color: #222;
+  color: var(--secondary-color);
   font-size: 1.8rem;
   font-weight: 500;
   text-decoration: none;
 
   transition: all 300ms ease;
-  border: 3px solid #222;
+  border: 3px solid var(--secondary-color);
   color: #fff;
-  background-color: #222;
+  background-color: var(--secondary-color);
 }
 
 .hero-text-box a:hover,
 .hero-text-box a:active {
-  border: 3px solid #222;
-  color: #222;
+  border: 3px solid var(--secondary-color);
+  color: var(--secondary-color);
   background-color: #fff;
 }
 
@@ -245,7 +250,7 @@ img {
   padding: 12px 10px 12px 14px;
   text-decoration: none;
   color: #eee;
-  background-color: #222;
+  background-color: var(--secondary-color);
   font-weight: 500;
   letter-spacing: 2.4px;
   transition: all 300ms;
@@ -255,8 +260,8 @@ img {
 .collection-text-box a:hover,
 .collection-text-box a:active {
   background-color: #eee;
-  color: #222;
-  border: 3px solid #222;
+  color: var(--secondary-color);
+  border: 3px solid var(--secondary-color);
 }
 
 /**********************************/
@@ -308,7 +313,7 @@ img {
 .faq-section h2 {
   font-weight: 600;
   font-size: 4.8rem;
-  color: #222;
+  color: var(--secondary-color);
 }
 
 .faq-wrapper {
@@ -344,7 +349,7 @@ img {
 .faq-icon {
   width: 24px;
   height: 24px;
-  stroke: #222;
+  stroke: var(--secondary-color);
   /* transform: rotate(180deg); */
 }
 
@@ -394,7 +399,7 @@ img {
   background-color: #eee;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  color: #222;
+  color: var(--secondary-color);
 }
 
 .cta-text-box {
@@ -435,8 +440,8 @@ img {
 .cta-form input,
 .cta-form textarea {
   border: none;
-  color: #222;
-  border-bottom: 2px solid #222;
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
   background-color: transparent;
   font-family: inherit;
   font-size: 1.6rem;
@@ -446,7 +451,7 @@ img {
 
 .cta-form input::placeholder,
 .cta-form textarea::placeholder {
-  color: #222;
+  color: var(--secondary-color);
   font-weight: 500;
   font-size: 1.4rem;
 }
@@ -468,8 +473,8 @@ img {
 .cta-form button {
   min-width: 50px;
   max-width: 65%;
-  border: 3px solid #222;
-  background-color: #222;
+  border: 3px solid var(--secondary-color);
+  background-color: var(--secondary-color);
   padding: 12px 0;
   font-family: inherit;
   font-size: 1.8rem;
@@ -482,7 +487,7 @@ img {
 
 .cta-form button:hover {
   background-color: transparent;
-  color: #222;
+  color: var(--secondary-color);
 }
 
 /**********************************/
@@ -492,7 +497,7 @@ footer {
   padding: 48px 64px;
   width: 100%;
   height: 512px;
-  background-color: #222;
+  background-color: var(--secondary-color);
   color: #eee;
   position: relative;
   overflow: hidden;
