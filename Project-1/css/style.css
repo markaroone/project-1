@@ -498,6 +498,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  font-size: 1.6rem;
 }
 
 footer > h2 {
