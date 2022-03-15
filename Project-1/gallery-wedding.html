@@ -14,7 +14,28 @@
     />
 
     <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <link rel="stylesheet" href="css/gallery.css" />
+
+    <!-- JS -->
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="js/script.js"></script>
+
+    <!-- <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script> -->
 
     <title>markaroone - GALLERY</title>
   </head>
@@ -23,38 +44,47 @@
     <!-- HEADER -->
     <!-- ********************************************* -->
     <header>
-      <div class="header-texts">
+      <nav class="navbar">
         <div>
           <h2>
             <a href="#">markaroone<span> {STUDIOS}</span></a>
           </h2>
         </div>
 
-        <!-- ********************************************* -->
-        <!-- NAV -->
-        <!-- ********************************************* -->
-        <nav>
+        <!-- Hamburger Menu -->
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+
+        <!-- Navigation -->
+        <div class="navbar-links">
           <ul class="main-nav-list">
             <li>
-              <a href="index.html">Home</a>
+              <a class="main-nav-link" href="index.html">Home</a>
             </li>
             <li>
-              <a href="#">Gallery</a>
+              <a class="main-nav-link" href="index.html#collections"
+                >Collections</a
+              >
             </li>
             <li>
-              <a href="about.html" target="_blank">About</a>
+              <a class="main-nav-link" href="about.html" target="_blank"
+                >About</a
+              >
             </li>
             <li class="nav-cta">
-              <a href="booking.html" target="_blank">Book Now</a>
+              <a
+                class="main-nav-link booking"
+                href="booking.html"
+                target="_blank"
+                >Book Now</a
+              >
             </li>
           </ul>
-        </nav>
-      </div>
-      <!-- <img
-        class="header-img"
-        src="img/francesco-cantinelli-6xsotTecOj4-unsplash.jpg"
-        alt=""
-      /> -->
+        </div>
+      </nav>
     </header>
 
     <!-- ********************************************* -->
@@ -197,7 +227,7 @@
     </main>
 
     <!-- ********************************************* -->
-    <!-- FOOTER-->
+    <!-- FOOTER -->
     <!-- ********************************************* -->
     <footer>
       <h2>markaroone.</h2>
@@ -237,14 +267,5 @@
         </p>
       </div>
     </footer>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>
