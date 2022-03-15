@@ -348,7 +348,7 @@ img {
   /* transform: rotate(180deg); */
 }
 
-.invert-icon .faq-icon {
+.open .faq-icon {
   transform: rotate(180deg);
 }
 

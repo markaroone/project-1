@@ -12,12 +12,11 @@ toggleButtonEl.addEventListener("click", () => {
 });
 
 // FAQ Section Accordion
-for (const [key, _] of faqAccordionEl.entries()) {
-  faqAccordionEl[key].addEventListener("click", () => {
-    faqAccordionEl[key].classList.toggle("open");
-    faqAccordionEl[key].classList.toggle("invert-icon");
+faqAccordionEl.forEach((val) => {
+  val.addEventListener("click", () => {
+    val.classList.toggle("open");
   });
-}
+});
 
 // Smooth Scrolling Animation
 {
