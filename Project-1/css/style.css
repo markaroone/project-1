@@ -206,6 +206,7 @@ img {
 .collection-img-box img {
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  width: 100%;
 }
 
 .collection-text-box {
