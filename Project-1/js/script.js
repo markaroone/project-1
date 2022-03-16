@@ -2,8 +2,8 @@
 
 const toggleButtonEl = document.querySelector(".toggle-button");
 const navBarLinksEl = document.querySelector(".navbar-links");
-const faqAccordionEl = document.querySelectorAll(".faq-accordion");
-const faqIconEl = document.querySelector("faq-icon");
+const faqAccordionEls = document.querySelectorAll(".faq-accordion");
+
 const allLinks = document.querySelectorAll("a:link");
 
 // Mobile Navigation
@@ -12,9 +12,23 @@ toggleButtonEl.addEventListener("click", () => {
 });
 
 // FAQ Section Accordion
-faqAccordionEl.forEach((val) => {
+faqAccordionEls.forEach((val, i) => {
   val.addEventListener("click", () => {
+    const currentAccordion = document.querySelector(".faq-accordion.open");
+
+    if (currentAccordion && currentAccordion !== val) {
+      currentAccordion.classList.toggle("open");
+      currentAccordion.querySelector(".faq-hidden").style.maxHeight = 0;
+    }
+
     val.classList.toggle("open");
+
+    const accordionBody = val.querySelector(".faq-hidden");
+    if (val.classList.contains("open")) {
+      accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+    } else {
+      accordionBody.style.maxHeight = 0;
+    }
   });
 });
 

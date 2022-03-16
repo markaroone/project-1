@@ -325,14 +325,16 @@ img {
 }
 
 .faq-accordion {
-  padding: 24px;
+  padding: 19px 24px 24px 24px;
   display: grid;
+  border-top: 5px solid transparent;
   grid-template-columns: auto 1fr auto;
   column-gap: 24px;
-  row-gap: 28px;
+  /* row-gap: 28px; */
   background-color: #fbfbf4;
   cursor: pointer;
   align-items: center;
+  transition: all 300ms ease-in-out;
 }
 
 .faq-number,
@@ -360,11 +362,15 @@ img {
 }
 
 .faq-hidden {
+  opacity: 0;
   grid-column: 2;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
 }
 
-.faq-hidden p {
+.faq-hidden-content p {
+  margin-top: 28px;
   font-size: 1.6rem;
   letter-spacing: 1.2px;
   line-height: 1.6;
@@ -374,9 +380,11 @@ img {
 /* OPEN ACCORDION */
 .open {
   border-top: 5px solid #2f2f28;
+  /* row-gap: 28px; */
 }
 
 .open .faq-hidden {
+  opacity: 1;
   display: block;
 }
 
