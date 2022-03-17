@@ -101,37 +101,17 @@
   /* MOBILE NAV */
   /**********************************/
 
-  .toggle-button {
-    display: flex;
-  }
-
-  .navbar-links {
+  .main-nav-list {
     display: none;
     width: 100%;
   }
 
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 28px;
-  }
-
-  .navbar-links ul {
-    width: 100%;
-
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .navbar-links li {
-    text-align: center;
-  }
-
-  /* .navbar-links li a {
-  } */
-
   .navbar-links.active {
     display: flex;
+  }
+
+  .hamburger {
+    display: block;
   }
 
   /**********************************/

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/queries.css" />
 
     <!-- JS -->
+    <!-- ionicon -->
     <script
       defer
       type="module"
@@ -29,6 +30,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
+    <!-- External JS -->
     <script defer src="js/script.js"></script>
 
     <!-- <script
@@ -44,20 +46,20 @@
     <!-- ********************************************* -->
     <header>
       <nav class="navbar">
-        <div>
+        <div class="logo">
           <h2>
             <a href="#">markaroone<span> {STUDIOS}</span></a>
           </h2>
         </div>
 
         <!-- Hamburger Menu -->
-        <a href="#" class="toggle-button">
+        <!-- <a href="#" class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </a>
+        </a> -->
 
-        <!-- Navigation -->
+        <!-- Desktop Navigation -->
         <div class="navbar-links">
           <ul class="main-nav-list">
             <li>
@@ -71,16 +73,38 @@
                 >About</a
               >
             </li>
-            <li class="nav-cta">
-              <a
-                class="main-nav-link booking"
-                href="booking.html"
-                target="_blank"
+            <li>
+              <a class="main-nav-link" href="booking.html" target="_blank"
                 >Book Now</a
               >
             </li>
           </ul>
+          <button class="hamburger">
+            <div class="bar"></div>
+          </button>
         </div>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li>
+            <a class="mobile-nav-link" href="#">Home</a>
+          </li>
+          <li>
+            <a class="mobile-nav-link" href="#collections">Collections</a>
+          </li>
+          <li>
+            <a class="mobile-nav-link" href="about.html" target="_blank"
+              >About</a
+            >
+          </li>
+          <li>
+            <a class="mobile-nav-link" href="booking.html" target="_blank"
+              >Book Now</a
+            >
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -518,7 +542,7 @@
 
       <div class="footer-right">
         <div>
-          <p>623 Harrison St., 2nd Floor, San Francisco, CA 94107</p>
+          <p>2nd Floor, 623 Harrison St., Baguio City 2600</p>
           <p>023-123-098</p>
           <p>+63910123456</p>
         </div>
