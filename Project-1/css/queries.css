@@ -304,7 +304,7 @@
   /* HEADER */
   /**********************************/
   header {
-    padding: 0 0 14px 28px;
+    padding: 0 28px 14px 28px;
   }
 
   .navbar {
@@ -412,5 +412,42 @@
   .form-contact-no,
   .form-email {
     grid-column: 1 / 3;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  /**********************************/
+  /* HEADER */
+  /**********************************/
+  header {
+    padding: 0 28px 14px 28px;
+  }
+
+  .navbar h2 {
+    font-size: 2rem;
+  }
+
+  .navbar h2 span {
+    font-size: 1.2rem;
+  }
+
+  .toggle-button {
+    top: 38px;
+  }
+
+  .navbar {
+    padding: 24px 0 24px 0;
+  }
+  /**********************************/
+  /* COLLECTION - SECTION */
+  /**********************************/
+
+  .collection-section {
+    padding: 56px 0 0 0;
+    margin: 0;
+  }
+
+  .collection-title {
+    font-size: 3.2rem;
   }
 }
