@@ -628,7 +628,7 @@ header {
 footer {
   padding: 48px 64px 64px 64px;
   width: 100%;
-  height: 512px;
+  /* height: 512px; */
   background-color: var(--secondary-color);
   color: #eee;
   position: relative;
@@ -660,11 +660,16 @@ footer a:visited {
 
 .footer-left,
 .footer-right {
+  height: 156px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 36px;
+}
+
+.footer-left {
+  margin-top: 10vw;
 }
 
 .footer-email {
