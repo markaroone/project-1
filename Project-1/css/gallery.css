@@ -19,7 +19,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 48px;
+  gap: 24px;
   /* padding: 48px; */
   width: 100%;
 }
@@ -28,8 +28,8 @@
   height: auto;
   width: 100%;
   /* Aspect-ratio will work as long as the image has a width */
-  aspect-ratio: 5/4;
-  object-fit: contain;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -39,7 +39,6 @@
 
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 56px;
   }
 
   .gallery-grid img {
@@ -54,6 +53,5 @@
 
   .gallery-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
   }
 }

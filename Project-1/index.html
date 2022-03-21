@@ -33,11 +33,6 @@
     <!-- External JS -->
     <script defer src="js/script.js"></script>
 
-    <!-- <script
-      defer
-      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
-    ></script> -->
-
     <title>markaroone - STUDIOS</title>
   </head>
   <body>
@@ -45,45 +40,34 @@
     <!-- HEADER -->
     <!-- ********************************************* -->
     <header>
-      <nav class="navbar">
+      <div class="navbar">
         <div class="logo">
           <h2>
             <a href="#">markaroone<span> {STUDIOS}</span></a>
           </h2>
         </div>
 
-        <!-- Hamburger Menu -->
-        <!-- <a href="#" class="toggle-button">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </a> -->
-
         <!-- Desktop Navigation -->
-        <div class="navbar-links">
-          <ul class="main-nav-list">
+        <nav class="desktop-nav">
+          <ul class="desktop-nav-list">
             <li>
-              <a class="main-nav-link" href="#">Home</a>
+              <a class="desktop-nav-link" href="#">Home</a>
             </li>
             <li>
-              <a class="main-nav-link" href="#collections">Collections</a>
+              <a class="desktop-nav-link" href="#collections">Collections</a>
             </li>
             <li>
-              <a class="main-nav-link" href="about.html" target="_blank"
-                >About</a
-              >
+              <a class="desktop-nav-link" href="about.html">About</a>
             </li>
             <li>
-              <a class="main-nav-link" href="booking.html" target="_blank"
-                >Book Now</a
-              >
+              <a class="desktop-nav-link" href="booking.html">Book Now</a>
             </li>
           </ul>
           <button class="hamburger">
             <div class="bar"></div>
           </button>
-        </div>
-      </nav>
+        </nav>
+      </div>
 
       <!-- Mobile Navigation -->
       <nav class="mobile-nav">
@@ -95,14 +79,10 @@
             <a class="mobile-nav-link" href="#collections">Collections</a>
           </li>
           <li>
-            <a class="mobile-nav-link" href="about.html" target="_blank"
-              >About</a
-            >
+            <a class="mobile-nav-link" href="about.html">About</a>
           </li>
           <li>
-            <a class="mobile-nav-link" href="booking.html" target="_blank"
-              >Book Now</a
-            >
+            <a class="mobile-nav-link" href="booking.html">Book Now</a>
           </li>
         </ul>
       </nav>
@@ -145,10 +125,8 @@
       <!-- COLLECTION - SECTION -->
       <!-- ********************************************* -->
       <section class="collection-section" id="collections">
-        <!-- <div class="bg-color-1" role="img" aria-label="background design"></div> -->
-        <!-- <div class="bg-color-2"></div> -->
-        <div class="collection container">
-          <h2 class="collection-title">Collections &mdash;</h2>
+        <div class="collection">
+          <h2 class="collection-title">COLLECTIONS</h2>
 
           <div class="collection-grid">
             <!-- Wedding - Img -->
@@ -186,17 +164,14 @@
                 a glance.
               </p>
               <span>
-                <a
-                  class="gallery-link"
-                  href="gallery-prints.html"
-                  target="_blank"
+                <a class="gallery-link" href="gallery-prints.html"
                   >SEE PRINTS GALLERY</a
                 >
               </span>
             </div>
 
             <!-- Prints - Img-->
-            <div class="collection-img-box">
+            <div class="collection-img-box img-justify-flex-end">
               <img
                 class="collection-img"
                 src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
@@ -222,7 +197,9 @@
               </p>
 
               <span>
-                <a class="gallery-link" href="#">SEE FASHION GALLERY</a>
+                <a class="gallery-link" href="gallery-fashion.html"
+                  >SEE FASHION GALLERY</a
+                >
               </span>
             </div>
 
@@ -237,12 +214,14 @@
               </p>
 
               <span>
-                <a class="gallery-link" href="#">SEE PORTRAITS GALLERY</a>
+                <a class="gallery-link" href="gallery-portraits.html"
+                  >SEE PORTRAITS GALLERY</a
+                >
               </span>
             </div>
 
             <!-- Portrait - Img -->
-            <div class="collection-img-box">
+            <div class="collection-img-box img-justify-flex-end">
               <img
                 class="collection-img"
                 src="https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
@@ -422,12 +401,12 @@
                 <!-- First Name -->
                 <div class="form-first-name">
                   <!-- <label for="first-name">First Name</label>
-                    <input
-                      id="first-name"
-                      type="text"
-                      placeholder="Juan"
-                      required
-                    /> -->
+                      <input
+                        id="first-name"
+                        type="text"
+                        placeholder="Juan"
+                        required
+                      /> -->
                   <label for="first-name"></label>
                   <input
                     id="first-name"
@@ -440,12 +419,12 @@
                 <!-- Last Name -->
                 <div class="form-last-name">
                   <!-- <label for="last-name">Last Name</label>
-                    <input
-                      id="last-name"
-                      type="text"
-                      placeholder="Dela Cruz"
-                      required
-                    /> -->
+                      <input
+                        id="last-name"
+                        type="text"
+                        placeholder="Dela Cruz"
+                        required
+                      /> -->
                   <label for="last-name"></label>
                   <input
                     id="last-name"
@@ -458,12 +437,12 @@
                 <!-- Contact No. -->
                 <div class="form-contact-no">
                   <!-- <label for="contact-no">Contact No.</label>
-                    <input
-                      id="contact-no"
-                      type="tel"
-                      placeholder="0910 234 5678"
-                      required
-                    /> -->
+                      <input
+                        id="contact-no"
+                        type="tel"
+                        placeholder="0910 234 5678"
+                        required
+                      /> -->
                   <label for="contact-no"></label>
                   <input
                     id="contact-no"
@@ -476,12 +455,12 @@
                 <!-- Email -->
                 <div class="form-email">
                   <!-- <label for="email">Email</label>
-                    <input
-                      id="email"
-                      type="email"
-                      placeholder="juan.delacruz@email.com"
-                      required
-                    /> -->
+                      <input
+                        id="email"
+                        type="email"
+                        placeholder="juan.delacruz@email.com"
+                        required
+                      /> -->
                   <label for="email"></label>
                   <input id="email" type="email" placeholder="Email" required />
                 </div>

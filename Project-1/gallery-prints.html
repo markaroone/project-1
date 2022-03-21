@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/gallery.css" />
 
     <!-- JS -->
+    <!-- ionicon -->
     <script
       defer
       type="module"
@@ -30,12 +31,8 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
+    <!-- External JS -->
     <script defer src="js/script.js"></script>
-
-    <!-- <script
-      defer
-      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
-    ></script> -->
 
     <title>markaroone - GALLERY</title>
   </head>
@@ -44,46 +41,55 @@
     <!-- HEADER -->
     <!-- ********************************************* -->
     <header>
-      <nav class="navbar">
-        <div>
+      <div class="navbar">
+        <div class="logo">
           <h2>
             <a href="#">markaroone<span> {STUDIOS}</span></a>
           </h2>
         </div>
 
-        <!-- Hamburger Menu -->
-        <a href="#" class="toggle-button">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </a>
-
-        <!-- Navigation -->
-        <div class="navbar-links">
-          <ul class="main-nav-list">
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <ul class="desktop-nav-list">
             <li>
-              <a class="main-nav-link" href="index.html">Home</a>
+              <a class="desktop-nav-link" href="index.html">Home</a>
             </li>
             <li>
-              <a class="main-nav-link" href="index.html#collections"
+              <a class="desktop-nav-link" href="index.html#collections"
                 >Collections</a
               >
             </li>
             <li>
-              <a class="main-nav-link" href="about.html" target="_blank"
-                >About</a
-              >
+              <a class="desktop-nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-cta">
-              <a
-                class="main-nav-link booking"
-                href="booking.html"
-                target="_blank"
-                >Book Now</a
-              >
+            <li>
+              <a class="desktop-nav-link" href="booking.html">Book Now</a>
             </li>
           </ul>
-        </div>
+          <button class="hamburger">
+            <div class="bar"></div>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li>
+            <a class="mobile-nav-link" href="index.html">Home</a>
+          </li>
+          <li>
+            <a class="mobile-nav-link" href="index.html#collections"
+              >Collections</a
+            >
+          </li>
+          <li>
+            <a class="mobile-nav-link" href="about.html">About</a>
+          </li>
+          <li>
+            <a class="mobile-nav-link" href="booking.html">Book Now</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
