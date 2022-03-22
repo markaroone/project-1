@@ -16,7 +16,6 @@
 
   .hero-section {
     padding: 0 0 calc(var(--section-top-btm-pad) + 48px) 0;
-    /* width: 100%; */
   }
 
   .hero {
@@ -49,7 +48,6 @@
   }
 
   .filler-text p {
-    /* font-style: italic; */
     font-size: 1.6rem;
     text-align: right;
   }
@@ -58,7 +56,7 @@
   /* FOOTER */
   /**********************************/
   footer {
-    padding: 64px;
+    padding: 64px 64px 56px 64px;
   }
 }
 
@@ -152,7 +150,7 @@
   /* FOOTER */
   /**********************************/
   footer {
-    padding: 96px 64px 64px 64px;
+    padding: 96px 64px 56px 64px;
   }
 }
 
@@ -226,7 +224,7 @@
   /* FOOTER */
   /**********************************/
   footer {
-    padding: 128px 64px 64px 64px;
+    padding: 128px 64px 56px 64px;
   }
 }
 
