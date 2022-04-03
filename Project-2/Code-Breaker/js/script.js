@@ -2,34 +2,68 @@
 ////////////////////////////////////
 // DOM Elements
 
-// Text values
+// Text values //////////////////////////////////
 const roundNumber = document.getElementById('round-number');
 const timerClock = document.getElementById('timer-clock');
+const timerBar = document.getElementById('timer-bar-inner');
+const currentScoreEl = document.getElementById('current-score');
 const gameMessage = document.getElementById('game-message');
 const numbersBox = document.getElementById('numbers-box');
 const inputDisplay = document.getElementById('input-display');
 let numbersBoxes;
 
-// Buttons
-const menuBtn = document.getElementById('menu-btn');
-const pauseBtn = document.getElementById('pause-btn');
-const decrementBtn = document.getElementById('dec-btn');
-const incrementBtn = document.getElementById('inc-btn');
-const randomBtn = document.getElementById('random-btn');
-const enterBtn = document.getElementById('enter-btn');
-const clearBtn = document.getElementById('clear-btn');
+// Buttons //////////////////////////////////
+// Home Screen Buttons
+const playGameHomeBtn = document.getElementById('home-btn--play');
+const howToPlayHomeBtn = document.getElementById('home-btn--how-to-play');
+const highScoreHomeBtn = document.getElementById('home-btn--high-score');
 
-// Local
+// Game Screen Buttons
+const menuGameBtn = document.getElementById('menu-btn');
+const pauseGameBtn = document.getElementById('pause-btn');
+const decrementGameBtn = document.getElementById('dec-btn');
+const incrementGameBtn = document.getElementById('inc-btn');
+const randomGameBtn = document.getElementById('random-btn');
+const enterGameBtn = document.getElementById('enter-btn');
+const clearGameBtn = document.getElementById('clear-btn');
+
+// Menu Screen Buttons
+const backMenuBtn = document.getElementById('menu-btn--back');
+const musicMenuBtn = document.getElementById('menu-btn--music');
+const soundMenuBtn = document.getElementById('menu-btn--sound');
+const howToPlayMenuBtn = document.getElementById('menu-btn--how-to-play');
+const highScoreMenuBtn = document.getElementById('menu-btn--high-score');
+const quitMenuBtn = document.getElementById('menu-btn--quit');
+
+// Pause Screen Buttons
+const backPauseBtn = document.getElementById('pause-btn--back');
+
+// Round Cleared Screen Buttons
+const exitGameRoundCleredBtn = document.getElementById('exit-game-btn');
+const nextRoundRoundClearedBtn = document.getElementById('next-round-btn');
+
+// Modals //////////////////////////////////
+const homeModal = document.getElementById('home-screen-modal');
+const menuModal = document.getElementById('menu-modal-container');
+const pauseModal = document.getElementById('pause-modal-container');
+const roundClearedModal = document.getElementById(
+  'round-cleared-modal-container'
+);
+
+////////////////////////////////////
+// Local JS
 let currentRound = 1;
 let numbersToGuess = [];
 let currentNumberGuessing = 0;
 let lowerRange = 1;
 let higherRange = 20;
-let defaultTime = 10; // in seconds unit
+let defaultTime = 60; // in seconds unit
 let runningTime = defaultTime;
 let gameRunning = 0;
 let gameOver = 0;
 let timer;
+let score = 0;
+let numberOfCorrectGuesses = 0;
 
 ////////////////////////////////////
 //  Functions
@@ -56,15 +90,24 @@ const checkGuess = function () {
       numbersToGuess[currentNumberGuessing];
     numbersBoxes[currentNumberGuessing].classList.add('show');
 
+    numberOfCorrectGuesses++;
+
+    addScore(10);
+
     clearInput();
     // console.log(numbersBoxes[currentNumberGuessing].textContent);
 
     currentNumberGuessing++;
     if (currentNumberGuessing === numbersToGuess.length) {
-      displayMessage('You Win!');
+      displayMessage('Round Cleared!');
+
+      if (currentRound > 1) addScore(20);
+
       resetTimer();
       clearInput();
-      setTimeout(initializeGame, 2000);
+      setTimeout(() => {
+        roundClearedModal.classList.toggle('hidden');
+      }, 2000);
     } else {
       displayMessage(`Nice One!`);
     }
@@ -118,8 +161,15 @@ const displayMessage = function (str) {
 };
 
 // This function sets the timerClock to the running time once the game is started
-const displayTime = function () {
+const updateTime = function () {
   timerClock.textContent = `${runningTime}s`;
+  timerBar.style.width = `${(runningTime / defaultTime) * 100}%`;
+};
+
+// This function adds a score and updates the current score DOM element
+const addScore = function (num) {
+  score += num;
+  currentScoreEl.textContent = score;
 };
 
 // This function will reset the game
@@ -134,7 +184,7 @@ const resetGame = function () {
   gameRunning = 0;
   gameOver = 0;
 
-  displayTime();
+  updateTime();
   displayMessage('Code Breaker');
 
   // Wait 2 sec and display: "Enter a number"
@@ -162,7 +212,7 @@ const initializeGame = function () {
 
   displayMessage(`Enter a number from ${lowerRange} to ${higherRange}`);
 
-  displayTime();
+  updateTime();
 
   inputBoxes();
 
@@ -176,7 +226,7 @@ const initializeGame = function () {
 // This function resets the timer
 const resetTimer = function () {
   clearTimeout(timer);
-  runningTime = defaultTime;
+  // runningTime = defaultTime;
 };
 
 // This function starts the timer
@@ -189,10 +239,10 @@ const startTimer = function () {
 const decrementTimer = function () {
   if (runningTime > 0 && gameRunning) {
     runningTime--;
-    displayTime();
+    updateTime();
   } else if (runningTime < 1 && gameRunning) {
     gameRunning = 0;
-    displayTime();
+    updateTime();
     resetTimer();
     // console.log('Game Over');
     playerLose();
@@ -214,6 +264,7 @@ resetGame();
 
 ////////////////////////////////////
 // Events
+// Keyboard events
 document.addEventListener('keyup', (e) => {
   // console.log(numbersToGuess);
   // console.log(e.key);
@@ -229,7 +280,16 @@ document.addEventListener('keyup', (e) => {
   } else if (e.key === 'Delete') clearInput();
 });
 
-enterBtn.addEventListener('click', (e) => {
+// Home Screen Events /////////////////////
+playGameHomeBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  homeModal.classList.toggle('hidden');
+});
+
+// Game Screen Events /////////////////////
+
+// Game Screen - Enter Button
+enterGameBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (!gameOver) {
     checkGuess();
@@ -239,14 +299,16 @@ enterBtn.addEventListener('click', (e) => {
   }
 });
 
-clearBtn.addEventListener('click', (e) => {
+// Game Screen - Clear Button
+clearGameBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (!gameOver) {
     clearInput();
   }
 });
 
-randomBtn.addEventListener('click', (e) => {
+// Game Screen - Random Button
+randomGameBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (!gameOver) {
     randomizeNumber();
@@ -256,7 +318,8 @@ randomBtn.addEventListener('click', (e) => {
   }
 });
 
-incrementBtn.addEventListener('click', (e) => {
+// Game Screen - Increment Button
+incrementGameBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (!gameOver) {
     incrementNum();
@@ -266,7 +329,8 @@ incrementBtn.addEventListener('click', (e) => {
   }
 });
 
-decrementBtn.addEventListener('click', (e) => {
+// Game Screen - Decrement Button
+decrementGameBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (!gameOver) {
     decrementNum();
@@ -274,4 +338,37 @@ decrementBtn.addEventListener('click', (e) => {
       startTimer();
     }
   }
+});
+
+// Game Screen - Menu Button
+menuGameBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  menuModal.classList.toggle('hidden');
+});
+
+// Game Screen - Pause Button
+pauseGameBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  pauseModal.classList.toggle('hidden');
+});
+
+// Menu Screen Events /////////////////////
+backMenuBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  menuModal.classList.toggle('hidden');
+});
+
+// Pause Screen Events /////////////////////
+// Pause Screen - Back to Game Button
+backPauseBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  pauseModal.classList.toggle('hidden');
+});
+
+// Round Cleared Screen Events /////////////////////
+// Round Cleared - Next Round Button
+nextRoundRoundClearedBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  roundClearedModal.classList.toggle('hidden');
+  initializeGame();
 });

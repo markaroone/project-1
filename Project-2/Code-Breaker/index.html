@@ -13,28 +13,37 @@
     />
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- External JS -->
-    <script defer src="js/script.js"></script>
+    <script defer src="script.js"></script>
 
     <title>Code Breaker</title>
   </head>
   <body>
     <header>
       <div id="header-status">
-        <div id="round-number-label">
-          Round: <span id="round-number">1</span>
-        </div>
         <button id="menu-btn" class="game-btn">Menu</button>
+
+        <div id="round-number-label">
+          Round:&nbsp;<span id="round-number">1</span>
+        </div>
+
         <div id="timer-count-container">
-          <div id="timer-bar"></div>
+          <div id="timer-bar-outer">
+            <div id="timer-bar-inner"></div>
+          </div>
           <div id="timer-clock">120s</div>
         </div>
+
+        <div id="current-score-label">
+          Score:&nbsp;<span id="current-score">0</span>
+        </div>
+
         <button id="pause-btn" class="game-btn">Pause</button>
       </div>
 
-      <h1 id="game-message">Code Breaker</h1>
+      <h2 id="game-message">Code Breaker</h2>
 
       <div id="numbers-container">
         <div id="numbers-box">
@@ -47,20 +56,82 @@
     </header>
 
     <main>
-      <div id="inputs-container">
+      <section id="home-screen-modal" class="">
+        <h1 id="game-title">CODE BREAKER</h1>
+        <div id="home-screen-btns-container">
+          <button id="home-btn--play" class="home-btn">Play Game</button>
+          <button id="home-btn--how-to-play" class="home-btn">
+            How To Play
+          </button>
+          <button id="home-btn--high-score" class="home-btn">
+            High Scores
+          </button>
+        </div>
+      </section>
+
+      <section id="menu-modal-container" class="hidden">
+        <div id="menu-modal">
+          <button id="menu-btn--back" class="menu-btn">Back to Game</button>
+          <button id="menu-btn--music" class="menu-btn">Music Off</button>
+          <button id="menu-btn--sound" class="menu-btn">Sound Off</button>
+          <button id="menu-btn--how-to-play" class="menu-btn">
+            How to Play
+          </button>
+          <button id="menu-btn--high-score" class="menu-btn">High Score</button>
+          <button id="menu-btn--quit" class="menu-btn">Quit Game</button>
+        </div>
+      </section>
+
+      <section id="pause-modal-container" class="hidden">
+        <div id="pause-modal">
+          <button id="pause-btn--back" class="pause-btn">Back to Game</button>
+        </div>
+      </section>
+
+      <section id="round-cleared-modal-container" class="hidden">
+        <div id="round-cleared-modal">
+          <h2 id="round-cleared-greeting">You are amazing!</h2>
+
+          <div id="round-cleared-texts">
+            <p id="round-cleared-time-used-container">
+              Time used:&nbsp;<span id="round-cleared-time-used">10</span>s
+            </p>
+
+            <p id="round-cleared-time-left-container">
+              Time left:&nbsp;<span id="round-cleared-time-left">10</span>s
+            </p>
+
+            <p id="round-cleared-current-score-container">
+              Current score:&nbsp;<span id="round-cleared-current-score"
+                >0</span
+              >
+            </p>
+          </div>
+
+          <div id="round-cleared-btns">
+            <button id="exit-game-btn" class="round-cleared-btn">
+              Exit Game
+            </button>
+            <button id="next-round-btn" class="round-cleared-btn">
+              Next Round
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="inputs-container">
         <!-- <button id="random-num-btn" class="inputs-btn">🔀</button> -->
 
-
         <button id="dec-btn" class="inc-dec-btn">-</button>
-        <input id="input-display" type="text"></input>
+        <input id="input-display" type="text" />
         <button id="inc-btn" class="inc-dec-btn">+</button>
         <!-- <button id="clear-input-btn" class="inputs-btn">❌</button> -->
-      </div>
-      <div id="inputs-btn-container">
+      </section>
+      <section id="inputs-btn-container">
         <button id="random-btn" class="inputs-btn">Random</button>
         <button id="enter-btn" class="inputs-btn">Enter</button>
         <button id="clear-btn" class="inputs-btn">Clear</button>
-      </div>
+      </section>
     </main>
   </body>
 </html>
