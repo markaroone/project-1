@@ -380,8 +380,6 @@ const populateSamplePlayers = function () {
       playerScore: generateRandomNum(10, 100),
     });
   }
-
-  // console.log(playersData);
 };
 
 // This function display the high score of players
