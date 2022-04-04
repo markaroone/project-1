@@ -10,6 +10,7 @@ const currentScoreEl = document.getElementById('current-score');
 const gameMessage = document.getElementById('game-message');
 const numbersBox = document.getElementById('numbers-box');
 const inputDisplay = document.getElementById('input-display');
+const highScoreList = document.getElementById('high-score--list-container');
 let numbersBoxes;
 
 // Buttons //////////////////////////////////
@@ -52,6 +53,9 @@ const quitGameGameOverBtn = document.getElementById('game-over-btn--quit-game');
 const confirmYesConfirmDialogBtn = document.getElementById('confirm-btn--yes');
 const confirmNoConfirmDialogBtn = document.getElementById('confirm-btn--no');
 
+// High Score Screen Button
+const backHighScoreBtn = document.getElementById('high-score--back-btn');
+
 // Modals //////////////////////////////////
 const allModals = document.querySelectorAll('.modal-container');
 const homeModal = document.getElementById('home-screen-modal');
@@ -60,6 +64,7 @@ const pauseModal = document.getElementById('pause-modal-container');
 const roundClearedModal = document.getElementById(
   'round-cleared-modal-container'
 );
+const highScoreModal = document.getElementById('high-score-modal-container');
 const gameOverModal = document.getElementById('game-over-modal-container');
 const confirmDialogModal = document.getElementById(
   'confirm-dialog-modal-container'
@@ -67,6 +72,36 @@ const confirmDialogModal = document.getElementById(
 
 ////////////////////////////////////
 // Local JS
+const playersSampleName = [
+  'James',
+  'Adams',
+  'Baker',
+  'Clark',
+  'Davis',
+  'Evans',
+  'Frank',
+  'Ghosh',
+  'Hills',
+  'Irwin',
+  'Jones',
+  'Klein',
+  'Lopez',
+  'Mason',
+  'Nalty',
+  'Ochoa',
+  'Patel',
+  'Quinn',
+  'Reily',
+  'Smith',
+  'Trott',
+  'Usman',
+  'Valdo',
+  'White',
+  'Xiang',
+  'Yakub',
+  'Zafar',
+];
+const playersData = [];
 let currentRound = 1;
 let numbersToGuess = [];
 let currentNumberGuessing = 0;
@@ -197,12 +232,16 @@ const updateTime = function () {
   updateBarTimerColor();
 };
 
+// This function updates the bar timer color
 const updateBarTimerColor = function () {
-  if (runningTime <= 40 * 10) {
+  if (runningTime <= 10 * 10) {
     timerBar.style.backgroundColor = 'red';
-  } else if (runningTime <= 50 * 10) {
+  } else if (runningTime <= 20 * 10) {
     timerBar.style.backgroundColor = 'rgb(255, 112, 55)';
-  } else if (runningTime > 50 * 10)
+  } else if (
+    runningTime > 50 * 10 &&
+    timerBar.style.backgroundColor !== 'rgb(255, 192, 55)'
+  )
     timerBar.style.backgroundColor = 'rgb(255, 192, 55)';
 };
 
@@ -330,6 +369,40 @@ const addAnimation = function () {
   });
 };
 
+// This function creates a sample players data for high score
+const populateSamplePlayers = function () {
+  const arrNum = generateNumbersToGuess(0, playersSampleName.length - 1, 18);
+
+  for (let i = 0; i < 18; i++) {
+    playersData.push({
+      playerRank: null,
+      playerName: playersSampleName[arrNum[i]],
+      playerScore: generateRandomNum(10, 100),
+    });
+  }
+
+  // console.log(playersData);
+};
+
+// This function display the high score of players
+const displayHighScore = function () {
+  highScoreList.innerHTML = '';
+
+  playersData.sort((a, b) => b.playerScore - a.playerScore);
+
+  playersData.forEach((player, i) => {
+    player.playerRank = i + 1;
+
+    const html = `<div class="player">
+              <span class="player-rank">${player.playerRank}</span>
+              <span class="player-name">${player.playerName}</span>
+              <span class="player-score">${player.playerScore}</span>
+            </div>`;
+
+    highScoreList.insertAdjacentHTML('beforeend', html);
+  });
+};
+
 // console.log(numbersToGuess);
 // console.log(numbersBoxes);
 
@@ -359,6 +432,11 @@ playGameHomeBtn.addEventListener('click', (e) => {
     homeModal.classList.toggle('hidden');
   }, 500);
   resetGame();
+});
+
+highScoreHomeBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  highScoreModal.classList.toggle('hidden');
 });
 
 // Game Screen Events /////////////////////
@@ -486,4 +564,12 @@ confirmNoConfirmDialogBtn.addEventListener('click', (e) => {
   confirmDialogModal.classList.add('hidden');
 });
 
+// High Score Screen Events /////////////////////
+backHighScoreBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  highScoreModal.classList.toggle('hidden');
+});
+
+populateSamplePlayers();
+displayHighScore();
 resetGame();
