@@ -42,12 +42,27 @@ const backPauseBtn = document.getElementById('pause-btn--back');
 const exitGameRoundCleredBtn = document.getElementById('exit-game-btn');
 const nextRoundRoundClearedBtn = document.getElementById('next-round-btn');
 
+// Game Over Screen Buttons
+const playAgainGameOverBtn = document.getElementById(
+  'game-over-btn--play-again'
+);
+const quitGameGameOverBtn = document.getElementById('game-over-btn--quit-game');
+
+// Confirm Dialog Screen Buttons
+const confirmYesConfirmDialogBtn = document.getElementById('confirm-btn--yes');
+const confirmNoConfirmDialogBtn = document.getElementById('confirm-btn--no');
+
 // Modals //////////////////////////////////
+const allModals = document.querySelectorAll('.modal-container');
 const homeModal = document.getElementById('home-screen-modal');
 const menuModal = document.getElementById('menu-modal-container');
 const pauseModal = document.getElementById('pause-modal-container');
 const roundClearedModal = document.getElementById(
   'round-cleared-modal-container'
+);
+const gameOverModal = document.getElementById('game-over-modal-container');
+const confirmDialogModal = document.getElementById(
+  'confirm-dialog-modal-container'
 );
 
 ////////////////////////////////////
@@ -57,13 +72,14 @@ let numbersToGuess = [];
 let currentNumberGuessing = 0;
 let lowerRange = 1;
 let higherRange = 20;
-let defaultTime = 60; // in seconds unit
+let defaultTime = 60 * 10; // in seconds unit
 let runningTime = defaultTime;
 let gameRunning = 0;
 let gameOver = 0;
 let timer;
 let score = 0;
 let numberOfCorrectGuesses = 0;
+let timeToAdd = 3 * 10;
 
 ////////////////////////////////////
 //  Functions
@@ -91,6 +107,19 @@ const checkGuess = function () {
     numbersBoxes[currentNumberGuessing].classList.add('show');
 
     numberOfCorrectGuesses++;
+
+    // if (runningTime + 3 <= defaultTime) {
+    //   runningTime += 3;
+    // } else {
+    //   runningTime;
+    // }
+
+    runningTime =
+      runningTime + timeToAdd <= defaultTime
+        ? runningTime + timeToAdd
+        : defaultTime;
+
+    updateTime();
 
     addScore(10);
 
@@ -162,8 +191,19 @@ const displayMessage = function (str) {
 
 // This function sets the timerClock to the running time once the game is started
 const updateTime = function () {
-  timerClock.textContent = `${runningTime}s`;
+  timerClock.textContent = `${(runningTime / 10).toFixed(0)}s`;
   timerBar.style.width = `${(runningTime / defaultTime) * 100}%`;
+
+  updateBarTimerColor();
+};
+
+const updateBarTimerColor = function () {
+  if (runningTime <= 40 * 10) {
+    timerBar.style.backgroundColor = 'red';
+  } else if (runningTime <= 50 * 10) {
+    timerBar.style.backgroundColor = 'rgb(255, 112, 55)';
+  } else if (runningTime > 50 * 10)
+    timerBar.style.backgroundColor = 'rgb(255, 192, 55)';
 };
 
 // This function adds a score and updates the current score DOM element
@@ -183,19 +223,24 @@ const resetGame = function () {
   currentNumberGuessing = 0;
   gameRunning = 0;
   gameOver = 0;
+  runningTime = defaultTime;
+  score = 0;
+  currentScoreEl.textContent = score;
 
+  hideAllModalsExceptHome();
   updateTime();
   displayMessage('Code Breaker');
 
   // Wait 2 sec and display: "Enter a number"
   setTimeout(() => {
     displayMessage(`Guess the number from ${lowerRange} - ${higherRange}`);
-  }, 1000);
+  }, 2500);
 
   inputBoxes();
   clearInput();
 
   numbersBoxes = document.querySelectorAll('.number');
+  roundNumber.textContent = currentRound;
 };
 
 // This function will initialize the game after a round is completed
@@ -232,7 +277,7 @@ const resetTimer = function () {
 // This function starts the timer
 const startTimer = function () {
   gameRunning = 1;
-  timer = setInterval(decrementTimer, 1000);
+  timer = setInterval(decrementTimer, 100);
 };
 
 // This function decrements the timer
@@ -253,11 +298,37 @@ const decrementTimer = function () {
 
 // This function handles what will happen if the player lose the game
 const playerLose = function () {
-  displayMessage('Game Over');
+  // displayMessage('Game Over');
+  gameOverModal.classList.toggle('hidden');
   gameOver = 1;
 };
 
-resetGame();
+// This function shows the confirm dialog box modal
+const showConfirmDialog = function () {
+  confirmDialogModal.classList.remove('hidden');
+};
+
+// This function hides all modals except the home screen modal
+const hideAllModalsExceptHome = function () {
+  allModals.forEach((modal) => {
+    if (modal.id !== 'home-screen-modal') modal.classList.add('hidden');
+    // modal.style.transition = 'none';
+  });
+};
+
+// This function removes all the transition animations of modal containers
+const removeAnimations = function () {
+  allModals.forEach((modal) => {
+    modal.style.transition = 'none';
+  });
+};
+
+// This function removes adds transition animations to modal containers
+const addAnimation = function () {
+  allModals.forEach((modal) => {
+    modal.style.transition = 'all 300ms';
+  });
+};
 
 // console.log(numbersToGuess);
 // console.log(numbersBoxes);
@@ -283,7 +354,11 @@ document.addEventListener('keyup', (e) => {
 // Home Screen Events /////////////////////
 playGameHomeBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  homeModal.classList.toggle('hidden');
+  addAnimation();
+  setTimeout(() => {
+    homeModal.classList.toggle('hidden');
+  }, 500);
+  resetGame();
 });
 
 // Game Screen Events /////////////////////
@@ -353,9 +428,16 @@ pauseGameBtn.addEventListener('click', (e) => {
 });
 
 // Menu Screen Events /////////////////////
+// Menu - Back to Game Button
 backMenuBtn.addEventListener('click', (e) => {
   e.preventDefault();
   menuModal.classList.toggle('hidden');
+});
+
+// Menu - Quit Game Button
+quitMenuBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  showConfirmDialog();
 });
 
 // Pause Screen Events /////////////////////
@@ -372,3 +454,36 @@ nextRoundRoundClearedBtn.addEventListener('click', (e) => {
   roundClearedModal.classList.toggle('hidden');
   initializeGame();
 });
+
+// Round Cleared - Quit Button
+exitGameRoundCleredBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  showConfirmDialog();
+});
+
+// Game Over Screen Events /////////////////////
+// Game Over - Play Again Button
+playAgainGameOverBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  gameOverModal.classList.toggle('hidden');
+
+  resetGame();
+});
+
+// Dialog Confirmation Screen Events /////////////////////
+// Dialog Confirm - Yes Button
+confirmYesConfirmDialogBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  removeAnimations();
+  hideAllModalsExceptHome();
+  homeModal.classList.remove('hidden');
+});
+
+// Dialog Confirm - No Button
+confirmNoConfirmDialogBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  confirmDialogModal.classList.add('hidden');
+});
+
+resetGame();

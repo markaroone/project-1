@@ -80,6 +80,8 @@ header {
   width: 100%;
   height: 100%;
   background-color: rgb(255, 192, 55);
+  /* background-color: green; */
+  transition: all 300ms;
 }
 
 #timer-clock {
@@ -124,8 +126,6 @@ header {
   max-width: 1200px;
   text-align: center;
   line-height: 1.6;
-  /* color: rgb(255, 192, 55); */
-  /* color: rgb(255, 192, 55); */
 }
 
 #numbers-container {
@@ -154,7 +154,7 @@ header {
   justify-content: center;
   align-items: center;
   font-size: 6.4rem;
-  transition: all 500ms;
+  transition: all 300ms;
 }
 
 .number.show {
@@ -307,6 +307,40 @@ main {
   pointer-events: none;
 }
 
+#home-screen-modal {
+  transition-delay: 300ms;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  /* background: rgba(65, 65, 65, 0.8); */
+  background: var(--main-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms;
+}
+
+.modal-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  width: 80%;
+  height: 80vh;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6.4rem;
+}
+
 #game-title {
   font-size: 6.4rem;
   letter-spacing: 0.8rem;
@@ -335,7 +369,7 @@ main {
 }
 
 /* MENU MODAL */
-#menu-modal-container {
+/* #menu-modal-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -351,9 +385,9 @@ main {
 #menu-modal-container.hidden {
   opacity: 0;
   pointer-events: none;
-}
+} */
 
-#menu-modal {
+/* #menu-modal {
   width: 80%;
   height: 80vh;
   background-color: #222;
@@ -362,7 +396,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 6.4rem;
-}
+} */
 
 .menu-btn {
   background: none;
@@ -379,7 +413,7 @@ main {
 }
 
 /* PAUSE MODAL */
-#pause-modal-container {
+/* #pause-modal-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -390,14 +424,14 @@ main {
   justify-content: center;
   align-items: center;
   transition: all 200ms ease-in-out;
-}
+} */
 
-#pause-modal-container.hidden {
+/* #pause-modal-container.hidden {
   opacity: 0;
   pointer-events: none;
-}
+} */
 
-#pause-modal {
+/* #pause-modal {
   width: 80%;
   height: 80vh;
   background-color: #222;
@@ -406,7 +440,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 6.4rem;
-}
+} */
 
 .pause-btn {
   background: none;
@@ -423,7 +457,7 @@ main {
 }
 
 /* ROUND CLEARED SCREEN MODAL */
-#round-cleared-modal-container {
+/* #round-cleared-modal-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -434,21 +468,25 @@ main {
   justify-content: center;
   align-items: center;
   transition: all 200ms ease-in-out;
+} */
+
+#round-cleared-modal-container {
+  background: rgba(65, 65, 65, 0.8);
 }
 
-#round-cleared-modal-container.hidden {
+/* #round-cleared-modal-container.hidden {
   opacity: 0;
   pointer-events: none;
-}
+} */
 
 #round-cleared-modal {
-  width: 80%;
+  /* width: 80%;
   height: 80vh;
   background-color: #222;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   gap: 9.6rem;
 }
 
@@ -482,5 +520,74 @@ main {
 }
 
 .round-cleared-btn:hover {
+  color: rgb(255, 192, 55);
+}
+
+/* GAME OVER MODAL */
+#game-over-modal-container {
+  background: rgba(65, 65, 65, 0.8);
+}
+
+#game-over-modal {
+  gap: 16.4rem;
+}
+
+#game-over-title {
+  font-size: 8rem;
+}
+
+#game-over-btns-container {
+  margin-top: 16rem;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-over-btn {
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 3.2rem;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.game-over-btn:hover {
+  color: rgb(255, 192, 55);
+}
+
+/* CONFIRMATION DIALOG MODAL*/
+#confirm-dialog-modal-container {
+  background: rgba(65, 65, 65, 0.8);
+}
+
+#confirm-dialog-modal {
+  gap: 12.8rem;
+}
+
+#confirm-dialog-modal--title {
+  font-size: 5.6rem;
+  line-height: 1.4;
+}
+
+#confirm-dialog-btns--container {
+  margin-top: 12.8rem;
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-btn {
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 3.2rem;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.confirm-btn:hover {
   color: rgb(255, 192, 55);
 }
