@@ -94,6 +94,9 @@
       <section id="pause-modal-container" class="modal-container hidden">
         <div id="pause-modal" class="modal">
           <button id="pause-btn--back" class="pause-btn">Back to Game</button>
+          <button id="pause-btn--restart" class="pause-btn">
+            Restart Game
+          </button>
         </div>
       </section>
 
@@ -208,6 +211,98 @@
         </div>
       </section>
 
+      <!-- HOW TO PLAY SCREEN MODAL -->
+      <section id="how-to-play-modal-container" class="modal-container hidden">
+        <div id="how-to-play-modal" class="">
+          <!-- Instruction 1 -->
+          <div id="how-to-play--1" class="how-to-play--container">
+            <div class="how-to-play-img-container">
+              <img
+                class="how-to-play-img"
+                src="assets/how-to-play/1.jpg"
+                alt="How to play instruction 1"
+              />
+            </div>
+            <p class="how-to-play-txt">
+              Guess the number in the hidden box before the time ends by typing
+              your guess in the input box. A range will be given on the screen.
+            </p>
+          </div>
+
+          <!-- Instruction 2 -->
+          <div id="how-to-play--2" class="how-to-play--container hidden">
+            <div class="how-to-play-img-container">
+              <img
+                class="how-to-play-img"
+                src="assets/how-to-play/2.jpg"
+                alt="How to play instruction 2"
+              />
+            </div>
+            <p class="how-to-play-txt">
+              Use the enter key on your keyboard or the enter button on the
+              screen to check if your guess is correct. Each correct guess is
+              worth 10 points. Clearing a round adds a bonus point of up to 50
+              points depending on the time you consumed that round.
+            </p>
+          </div>
+
+          <!-- Instruction 3 -->
+          <div id="how-to-play--2" class="how-to-play--container hidden">
+            <div class="how-to-play-img-container">
+              <img
+                class="how-to-play-img"
+                src="assets/how-to-play/3.jpg"
+                alt="How to play instruction 2"
+              />
+            </div>
+            <p class="how-to-play-txt">
+              You can use the + or - buttons on the side of the input box to
+              increment your guess by 1.
+            </p>
+          </div>
+
+          <!-- Instruction 4 -->
+          <div id="how-to-play--2" class="how-to-play--container hidden">
+            <div class="how-to-play-img-container">
+              <img
+                class="how-to-play-img"
+                src="assets/how-to-play/4.jpg"
+                alt="How to play instruction 2"
+              />
+            </div>
+            <p class="how-to-play-txt">
+              You can use the random button to generate a random number based on
+              the given range.
+            </p>
+          </div>
+
+          <!-- Instruction 5 -->
+          <div id="how-to-play--2" class="how-to-play--container hidden">
+            <div class="how-to-play-img-container">
+              <img
+                class="how-to-play-img"
+                src="assets/how-to-play/5.jpg"
+                alt="How to play instruction 2"
+              />
+            </div>
+            <p class="how-to-play-txt">
+              You can clear the input field by using the backspace key or delete
+              key on your keyboard or by using the clear button on the screen.
+            </p>
+          </div>
+
+          <button id="how-to-play-btn--back">Back</button>
+
+          <div id="how-to-play-btns--radio">
+            <button id="radio-btn--1" class="radio-btn selected"></button>
+            <button id="radio-btn--2" class="radio-btn"></button>
+            <button id="radio-btn--3" class="radio-btn"></button>
+            <button id="radio-btn--4" class="radio-btn"></button>
+            <button id="radio-btn--5" class="radio-btn"></button>
+          </div>
+        </div>
+      </section>
+
       <!-- GAME OVER SCREEN MODAL -->
       <section id="game-over-modal-container" class="modal-container hidden">
         <div id="game-over-modal" class="modal">
@@ -223,21 +318,51 @@
         </div>
       </section>
 
-      <!-- CONFIRMATION DIALOG SCREEN MODAL -->
+      <!-- RESET GAME CONFIRMATION DIALOG SCREEN MODAL -->
       <section
-        id="confirm-dialog-modal-container"
+        id="reset-confirm-dialog-modal-container"
         class="modal-container hidden"
       >
-        <div id="confirm-dialog-modal" class="modal">
-          <h2 id="confirm-dialog-modal--title">
+        <div id="reset-confirm-dialog-modal" class="modal">
+          <h2 id="reset-confirm-dialog-modal--title">
             Do you want to<br />exit the game?
           </h2>
-          <div id="confirm-dialog-btns--container">
-            <button id="confirm-btn--yes" class="confirm-btn">Yes</button>
-            <button id="confirm-btn--no" class="confirm-btn">No</button>
+          <div id="reset-confirm-dialog-btns--container">
+            <button id="reset-confirm-btn--yes" class="confirm-btn">Yes</button>
+            <button id="reset-confirm-btn--no" class="confirm-btn">No</button>
           </div>
         </div>
       </section>
+
+      <!-- RESTART GAME CONFIRMATION DIALOG SCREEN MODAL -->
+      <section
+        id="restart-confirm-dialog-modal-container"
+        class="modal-container hidden"
+      >
+        <div id="restart-confirm-dialog-modal" class="modal">
+          <h2 id="restart-confirm-dialog-modal--title">
+            Do you want to<br />restart the game?
+          </h2>
+          <div id="restart-confirm-dialog-btns--container">
+            <button id="restart-confirm-btn--yes" class="confirm-btn">
+              Yes
+            </button>
+            <button id="restart-confirm-btn--no" class="confirm-btn">No</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ENTER NAME SCREEN -->
+      <section id="enter-name-modal-container" class="modal-container hidden">
+        <div id="enter-name-modal" class="modal">
+          <button id="enter-name-modal--back-btn">Back to Main</button>
+          <p id="enter-name-modal--title">Input your name</p>
+          <input id="enter-name-modal--input" type="text" />
+          <button id="enter-name-modal--enter-btn">Enter</button>
+        </div>
+      </section>
+
+      <!-- NEW HIGH SCORE MODAL -->
 
       <!-- GAME SCREEN - INPUTS 1 -->
       <section id="inputs-container">
