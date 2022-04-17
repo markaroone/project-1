@@ -500,7 +500,7 @@ enterGameBtn.addEventListener('click', (e) => {
   if (!gameOver) {
     checkGuess();
     if (!gameRunning) {
-      // startTimer();
+      startTimer();
     }
   }
 });
