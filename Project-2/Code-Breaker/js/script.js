@@ -608,7 +608,6 @@ playAgainGameOverBtn.addEventListener('click', (e) => {
 
 quitGameGameOverBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  savePlayerData();
   displayHighScore();
   gameOverModal.classList.toggle('hidden');
   homeModal.classList.toggle('hidden');
