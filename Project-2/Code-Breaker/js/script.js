@@ -104,6 +104,7 @@ const howToPlayIntructions = document.querySelectorAll(
 
 ////////////////////////////////////
 // Local JS
+
 const playersSampleName = [
   'James',
   'Adams',
@@ -133,6 +134,7 @@ const playersSampleName = [
   'Yakub',
   'Zafar',
 ];
+
 const playersData = [];
 let currentRound = 1;
 let numbersToGuess = [];
@@ -460,12 +462,16 @@ document.addEventListener('keyup', (e) => {
   // console.log(e.key);
   // Checks the guess if enter is pressed
   e.preventDefault();
-  if (e.key === 'Enter' && !gameOver) {
+  if (
+    e.key === 'Enter' &&
+    !gameOver &&
+    inputDisplay === document.activeElement
+  ) {
     if (!gameRunning) {
       gameRunning = 1;
+
       startTimer();
     }
-
     checkGuess();
   } else if (e.key === 'Delete') clearInput();
 });
@@ -650,6 +656,7 @@ backHighScoreBtn.addEventListener('click', (e) => {
 // Enter Name Screen Events /////////////////////
 backEnterNameBtn.addEventListener('click', (e) => {
   e.preventDefault();
+  setTimeout(() => (gameRunning = 1), 300);
   enterNameModal.classList.toggle('hidden');
 });
 
@@ -664,6 +671,7 @@ enterNameEnterNameBtn.addEventListener('click', (e) => {
   }, 1000);
 
   resetGame();
+  enterNameInput.blur();
 });
 
 // How to Play Screen Events /////////////////////
@@ -701,8 +709,6 @@ radioBtns.forEach((btn, i) => {
     });
   });
 });
-
-console.log(radioBtns);
 
 populateSamplePlayers();
 displayHighScore();
