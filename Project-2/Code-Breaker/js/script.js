@@ -150,6 +150,7 @@ let score = 0;
 let numberOfCorrectGuesses = 0;
 let timeToAdd = 3 * 10;
 let playerInputName;
+let gameScreen = 0;
 
 ////////////////////////////////////
 //  Functions
@@ -500,7 +501,7 @@ enterGameBtn.addEventListener('click', (e) => {
   if (!gameOver) {
     checkGuess();
     if (!gameRunning) {
-      startTimer();
+      // startTimer();
     }
   }
 });
@@ -608,6 +609,7 @@ playAgainGameOverBtn.addEventListener('click', (e) => {
 
 quitGameGameOverBtn.addEventListener('click', (e) => {
   e.preventDefault();
+  savePlayerData();
   displayHighScore();
   gameOverModal.classList.toggle('hidden');
   homeModal.classList.toggle('hidden');
