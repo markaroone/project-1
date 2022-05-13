@@ -2,6 +2,18 @@ import React from 'react';
 import styles from './Header.module.css';
 
 const Header = ({ tasks }) => {
+  const currentTime = new Date().getHours();
+
+  console.log(currentTime);
+
+  const getGreeting = (time) => {
+    if (time < 12) return 'morning';
+
+    if (time >= 12 && time < 18) return 'afternoon';
+
+    if (time > 18) return 'evening';
+  };
+
   const pendingTasks = tasks.reduce((sum, cur) => {
     if (cur.status === 'pending') sum++;
     return sum;
@@ -14,7 +26,7 @@ const Header = ({ tasks }) => {
 
   return (
     <header className={styles['main-container']}>
-      <h1>Good afternoon, Christian</h1>
+      <h1>Good {getGreeting(currentTime)}, Christian</h1>
       <p>{str}</p>
     </header>
   );
