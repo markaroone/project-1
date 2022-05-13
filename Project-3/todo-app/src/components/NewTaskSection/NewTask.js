@@ -39,12 +39,6 @@ const NewTask = ({ tasks, dispatchTasks }) => {
       title: title.trim(),
     };
 
-    // console.log(newTask);
-
-    // tasks.forEach((el) => {
-    //   if (el.task === newTask.task) console.log(true);
-    // });
-
     if (isDuplicate(newTask.task)) {
       showStatus('Duplicate task found.');
       return;

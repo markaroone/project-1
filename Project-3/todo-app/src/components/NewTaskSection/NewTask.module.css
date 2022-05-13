@@ -130,7 +130,8 @@
 
 .submission-status {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: calc(1rem + 1vmin);
   font-weight: 500;
   color: #adb5bd;
+  margin-bottom: calc(1rem + 1vmin);
 }
