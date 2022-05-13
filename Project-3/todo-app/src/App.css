@@ -1,0 +1,15 @@
+.App {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 120rem;
+  height: 100vh;
+
+  padding: calc(0.8rem + 2vmin) calc(2rem + 2vmin) calc(1.8rem + 2vmin);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: calc(2.4rem + 3.2vmin);
+
+  font-size: calc(1.6rem + 2vmin);
+}

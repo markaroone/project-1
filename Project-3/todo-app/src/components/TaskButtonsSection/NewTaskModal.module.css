@@ -1,0 +1,50 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: calc(0.2rem + 0.8vmin) calc(1.4rem + 0.8vmin) calc(0.8rem + 0.8vmin);
+}
+
+.title,
+.task,
+.select,
+.button {
+  border: none;
+  background-color: inherit;
+  color: #343a40;
+  font-family: inherit;
+  padding: calc(0.2rem + 0.8vmin);
+}
+
+.title {
+  font-weight: 600;
+  font-size: calc(1.4rem + 0.8vmin);
+}
+
+.task {
+  font-weight: 500;
+  height: 5.6rem;
+  max-height: 5.6rem;
+  font-size: calc(1.2rem + 0.8vmin);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #868e96;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #868e96;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #868e96;
+}

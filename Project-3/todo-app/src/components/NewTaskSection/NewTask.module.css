@@ -1,0 +1,136 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.add-task-enabler {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: text;
+  gap: calc(0.1rem + 0.6vmin);
+}
+
+.add-task-enabler__btn {
+  background-color: transparent;
+  border: none;
+  font-size: calc(1rem + 1.8vmin);
+  display: flex;
+  align-items: center;
+  --ionicon-stroke-width: 4.6rem;
+  color: #868e96;
+  cursor: pointer;
+}
+
+.open-form-input {
+  border: none;
+  background-color: transparent;
+  font-size: calc(1.2rem + 1.2vmin);
+  font-family: inherit;
+  font-weight: 500;
+}
+
+/* Hidden form */
+
+.hidden {
+  /* padding: 1.2rem 1.8rem 1.4rem 1.8rem; */
+  padding: calc(1.2rem + 1vmin) calc(1.4rem + 1vmin);
+  background-color: #f8f9fa;
+  color: #343a40;
+  display: flex;
+  flex-direction: column;
+  gap: calc(0.8rem + 0.4vmin);
+  border-radius: 1rem;
+  position: relative;
+}
+
+.title,
+.task,
+.select,
+.add {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.title,
+.task {
+  width: 100%;
+}
+
+.title:focus,
+.task:focus {
+  outline: none;
+}
+
+.title {
+  font-size: calc(1.4rem + 0.8vmin);
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+
+.task {
+  font-size: calc(1.2rem + 0.6vmin);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.4px;
+
+  color: #868e96;
+  height: 5.6rem;
+  resize: none;
+}
+
+.select {
+  width: auto;
+  font-size: calc(1rem + 0.6vmin);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.add {
+  padding: calc(0.4rem + 0.8vmin) calc(1rem + 1vmin);
+  background-color: #212529;
+  cursor: pointer;
+  color: #f8f9fa;
+  border-radius: 0.5rem;
+  font-size: calc(1rem + 0.8vmin);
+  font-weight: 500;
+  transition: 200ms;
+}
+
+.add:hover {
+  background-color: #495057;
+}
+
+.cancel {
+  position: absolute;
+  top: calc(0.6rem + 1vmin);
+  right: calc(0.4rem + 1vmin);
+  border: none;
+  background-color: transparent;
+  font-size: calc(1.4rem + 1.4vmin);
+
+  color: #868e96;
+
+  cursor: pointer;
+
+  transition: 200ms;
+}
+
+.cancel:hover {
+  color: #343a40;
+}
+
+.submission-status {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #adb5bd;
+}

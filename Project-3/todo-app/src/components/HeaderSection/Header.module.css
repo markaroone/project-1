@@ -1,0 +1,17 @@
+.main-container {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.4rem; */
+}
+
+.main-container h1 {
+  font-size: calc(1.4rem + 2.4vmin);
+  font-weight: 600;
+}
+
+.main-container p {
+  font-size: calc(0.6rem + 2vmin);
+  font-weight: 500;
+  color: #868e96;
+}
