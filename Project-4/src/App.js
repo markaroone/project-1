@@ -21,7 +21,11 @@ const pokemonsReducer = (pokemons, action) => {
   }
 
   if (action.type === COMMAND_POKEMON.ADD_POKEMON_DATA) {
-    return { ...pokemons, pokemonData: [...pokemons.pokemonData, action.data] };
+    const newData = [...pokemons.pokemonData, action.data].sort(
+      (a, b) => a.id - b.id
+    );
+
+    return { ...pokemons, pokemonData: newData };
   }
 
   return pokemons;
