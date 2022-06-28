@@ -1,0 +1,161 @@
+/* .item {
+  background-color: #e9ecef;
+  max-width: 48rem;
+
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+}
+
+.img-container {
+  width: 50%;
+  max-width: 24rem;
+}
+
+.img {
+  aspect-ratio: 1;
+
+  max-width: 64rem;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.texts {
+  width: 100%;
+}
+
+.actions {
+  background-color: aliceblue;
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.delete {
+  margin-left: auto;
+} */
+
+.item {
+  /* background-color: antiquewhite; */
+
+  /* background-color: #e9ecef; */
+  width: 100%;
+  max-width: 80rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 1.8rem;
+  /* border-radius: 4px; */
+  /* overflow: hidden; */
+  /* padding: 1.8rem; */
+  padding: 2.8rem;
+  border-bottom: 1px solid #ced4da;
+}
+
+.img-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  aspect-ratio: 1;
+  width: 90%;
+  /* width: 16rem;
+  height: 16rem; */
+
+  /* width: 100%; */
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(1rem + 1.8vmin);
+  padding: 0.5rem;
+}
+
+.name {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+.category {
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #868e96;
+}
+
+.price {
+  margin-top: 0.6rem;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600;
+}
+
+.actions {
+  margin-top: 0.4rem;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+
+.count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  font-weight: 600;
+  width: 3.2rem;
+  height: 3.2rem;
+  text-align: center;
+  background-color: #212529;
+  border-radius: 50%;
+  color: #f8f9fa;
+}
+
+.incdec,
+.delete {
+  border: none;
+  cursor: pointer;
+}
+
+.delete {
+  margin-left: auto;
+  background-color: transparent;
+  width: 3.6rem;
+  height: 3.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 300ms;
+}
+
+.delete:hover {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.incdec-container {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.incdec {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 1000px) {
+  .item {
+    max-width: 52rem;
+  }
+}

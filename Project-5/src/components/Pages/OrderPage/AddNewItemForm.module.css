@@ -1,0 +1,96 @@
+.wrapper {
+  width: 100%;
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form input,
+.form textarea {
+  width: 50%;
+}
+
+.form textarea {
+  resize: none;
+  height: 10vh;
+}
+
+.form select {
+  width: 20%;
+}
+
+.error {
+  border: 2px solid #e03131;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.form > input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.form > input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.form > input::placeholder, .form > textarea::placeholder {
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+}
+
+.form > input, .form > textarea {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 28px;
+}
+
+.form > input:hover, .form > textarea:hover, .form > button:hover, .form > select:hover{
+  border: 3px solid #555;
+}
+
+.form > select {
+  padding: 12px 20px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  margin: 8px 0;
+  border: 3px solid #ccc;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 28px;
+  background: none;
+}
+
+.form > button {
+  padding: 12px 20px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  margin: 8px 0;
+  border: 3px solid #ccc;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 28px;
+  background: none;  
+}
+
+@media only screen and (max-width: 600px) {
+  .form > select {
+    width: auto;
+  }
+
+  .form > textarea {
+    height: auto;
+  }
+}
+
+

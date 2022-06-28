@@ -1,0 +1,97 @@
+.Footer-container {
+  padding: 5.6rem;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+  display: flex;
+  /* text-align: center; */
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #f8f9fa;
+  background-color: #212529;
+  margin-top: auto;
+}
+
+.logo {
+  font-family: 'Smooch';
+  font-size: 4.8rem;
+}
+
+.address {
+  font-size: 1.4rem;
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.contact {
+  font-size: 1.4rem;
+}
+
+.mailing-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 1.2rem; */
+}
+
+.mailing-list__title {
+  font-size: 1.8rem;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #f8f9fa;
+  padding: 1rem;
+}
+
+.form input::placeholder {
+  font-family: 'Poppins';
+  letter-spacing: 1px;
+  text-align: center;
+  color: #dee2e6;
+}
+
+.form button {
+  background-color: #dee2e6;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.social-media {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1.8rem;
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .Footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.8rem;
+  }
+}

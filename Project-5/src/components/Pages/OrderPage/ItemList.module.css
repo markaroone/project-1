@@ -1,0 +1,9 @@
+.ul {
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 24rem);
+  justify-content: center;
+  gap: 2.8rem;
+}

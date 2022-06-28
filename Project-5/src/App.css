@@ -1,0 +1,14 @@
+/* font-size: clamp(1.6rem, 3vw, 2.8rem);
+  font-size: clamp(2rem, 5vw, 5.6rem); */
+
+.App {
+  /* margin: 0 auto; */
+
+  /* max-width: 120rem; */
+  font-size: clamp(1.6rem, 3vw, 1.8rem);
+  /* padding-bottom: 2.8rem; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}

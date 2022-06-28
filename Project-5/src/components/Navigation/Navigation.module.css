@@ -1,0 +1,165 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.wrapper li {
+  list-style: none;
+}
+
+.sidebar-modal {
+  padding: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  /* gap: 1.8rem; */
+}
+
+.sidebar-modal a:link,
+.sidebar-modal a:visited {
+  text-decoration: none;
+  color: #f8f9fa;
+  /* color: #212529; */
+}
+
+.main-link {
+  text-transform: uppercase;
+  margin-top: 2.8rem;
+  letter-spacing: 3.2px;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.link,
+.link:visited {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link > h1 {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.nav {
+  margin: 0 auto;
+
+  padding: 1.8rem;
+
+  width: 100%;
+  max-width: 120rem;
+
+  display: inline-grid;
+  grid-template-rows: 2fr;
+  justify-items: center;
+  row-gap: 1.2rem;
+  color: #212529;
+}
+
+.logo {
+  align-self: center;
+
+  font-size: clamp(4.2rem, 5vw, 4.8rem);
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  font-family: 'Smooch', sans-serif;
+}
+
+.links-container {
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.links-container .link {
+  transition: 300ms;
+}
+
+.links-container .link:hover {
+  color: #ffa94d;
+}
+
+.icons-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.8rem;
+}
+
+.hamburger {
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.hamburger button {
+  border: none;
+  background-color: transparent;
+}
+
+.modal-container {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2.4px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-left: 3.2rem;
+}
+
+.modal {
+  color: #f8f9fa;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.cart-logo {
+  position: relative;
+}
+
+.cart-logo span {
+  position: absolute;
+  bottom: 0;
+  left: -3px;
+
+  width: 1.8rem;
+  height: 1.8rem;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  background-color: #ffa94d;
+  color: #212529;
+}
+
+@media only screen and (min-width: 769px) {
+  .nav {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+  }
+
+  .logo {
+    grid-row: 1/2;
+    justify-self: flex-start;
+  }
+
+  /* .hamburger {
+    margin: 0;
+  } */
+
+  .icons-container {
+    justify-content: flex-end;
+  }
+}

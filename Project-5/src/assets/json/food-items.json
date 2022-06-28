@@ -1,0 +1,307 @@
+[
+  {
+    "name": "Caramel Ice Cream",
+    "category": "dessert",
+    "description": "Luxurious ice cream with brownies. A balance of sweet yet salty and rich yet light.",
+    "rating": "4",
+    "price": "95",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80"
+  },
+  {
+    "name": "Chocolate Pudding",
+    "category": "dessert",
+    "description": "Insanely good, creamy chocolate pudding.",
+    "rating": "4",
+    "price": "95",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
+  },
+  {
+    "name": "Blueberry Cheesecake",
+    "category": "dessert",
+    "description": "Light as a feather cheesecake on graham crust topped with blueberries.",
+    "rating": "3",
+    "price": "65",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80"
+  },
+  {
+    "name": "Blueberry Muffin",
+    "category": "dessert",
+    "description": "This classic is made with sweet vanilla batter baked with blueberries and topped with blueberry crumble.",
+    "rating": "5",
+    "price": "65",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://images.unsplash.com/photo-1558303420-f814d8a590f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1365&q=80"
+  },
+
+  {
+    "name": "Fries",
+    "category": "Sides",
+    "img": "https://pixabay.com/photos/french-fries-salt-food-brown-food-923687/",
+
+    "description": "Served with sweet chili and sour cream sauce.",
+    "rating": "5",
+    "price": "60",
+    "date": "new Date()",
+    "in-stock": "true",
+    "favorite": "true"
+  },
+  {
+    "name": "Garlic Bread",
+    "category": "Sides",
+    "img": "https://pixabay.com/photos/garlic-bread-garlic-bruschetta-food-6156598/",
+
+    "description": "Fluffy garlic bread wedges toasted to perfection.",
+    "rating": "5",
+    "price": "50",
+    "date": "new Date()",
+    "in-stock": "true",
+    "favorite": "true"
+  },
+  {
+    "name": "Potato wedges",
+    "category": "Sides",
+    "img": "https://pixabay.com/photos/potatoes-wedges-garlic-parsly-diet-6700762/",
+
+    "description": "Served with sweet chili and sour cream sauce.",
+    "rating": "5",
+    "price": "70",
+    "date": "new Date()",
+    "in-stock": "true",
+    "favorite": "true"
+  },
+  {
+    "name": "Chicken nuggets",
+    "category": "Sides",
+    "img": "https://unsplash.com/photos/P_z_xlMGuEk",
+
+    "description": "12 nuggets with sweet chili and sour cream sauce.",
+    "rating": "5",
+    "price": "80",
+    "date": "new Date()",
+    "in-stock": "true",
+    "favorite": "true"
+  },
+  {
+    "name": "Onion rings",
+    "category": "Sides",
+    "img": "https://pixabay.com/photos/onion-rings-onion-rings-fried-food-6037253/",
+
+    "description": "12 Beer battered onion rings with sweet chili and sour cream sauce.",
+    "rating": "5",
+    "price": "60",
+    "date": "new Date()",
+    "in-stock": "true",
+    "favorite": "true"
+  },
+  {
+    "name": "Nachos",
+    "category": "Sides",
+    "img": "https://unsplash.com/photos/ZtrNoHo1ZMU",
+
+    "description": "Corn chips, melted cheese, black beans, salsa, guacamole, and sour cream sauce.",
+    "rating": "5",
+    "price": "70",
+    "date": "new Date()",
+    "in-stock": "true",
+    "favorite": "true"
+  },
+  {
+    "name": "Ham and Cheese",
+    "category": "pizza",
+    "description": "Enjoy this all time favorite! Pizza Sauce, Mozzarella, Ham, and Cheese.",
+    "rating": "5",
+    "price": "240",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://www.pexels.com/photo/close-up-photo-of-person-holding-pizza-1653877/"
+  },
+  {
+    "name": "Shrimp and Mushroom",
+    "category": "pizza",
+    "description": "Juicy shrimps, onions, and garlic on a bed of white wine sauce.",
+    "rating": "5",
+    "price": "300",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://images.pexels.com/photos/4553111/pexels-photo-4553111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    "name": "Pepperoni",
+    "category": "pizza",
+    "description": "A true classic- pepperoni and mozzarella cheese on our signature pizza sauce.",
+    "rating": "5",
+    "price": "200",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://images.pexels.com/photos/4109111/pexels-photo-4109111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    "name": "Hawaiian",
+    "category": "pizza",
+    "description": "Say 'Aloha' to our all-time favorite with double layers of ham and pineapple!",
+    "rating": "5",
+    "price": "200",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://cdn.pixabay.com/photo/2020/08/19/14/43/pizza-5501075_1280.jpg"
+  },
+  {
+    "name": "Red pepper and cheese",
+    "category": "pizza",
+    "description": "Our pizza containing red pepper and our signature pizza cheese.",
+    "rating": "5",
+    "price": "200",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://images.pexels.com/photos/1049620/pexels-photo-1049620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    "name": "Mushroom and Cheese",
+    "category": "pizza",
+    "description": "Classic combination of mushroom and cheese.",
+    "rating": "5",
+    "price": "230",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://images.pexels.com/photos/4553127/pexels-photo-4553127.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    "name": "Pizza with egg",
+    "category": "pizza",
+    "description": "Our unique topping of our well-known cheese with egg.",
+    "rating": "5",
+    "price": "200",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://images.pexels.com/photos/845812/pexels-photo-845812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    "name": "4 Cheese",
+    "category": "pizza",
+    "description": "Our Cheese pizza loaded with melt-in-your-mouth parmesan cheese, mozzarella, cheddar, and cream cheese",
+    "rating": "5",
+    "price": "210",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+  },
+  {
+    "name": "Fried Chicken",
+    "category": "chicken",
+    "description": "Breaded with our own special seasoning to perfection!",
+    "rating": "5",
+    "price": "90",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://cdn.pixabay.com/photo/2016/03/05/21/38/batter-1239024__480.jpg"
+  },
+  {
+    "name": "Fried Chicken with Rice",
+    "category": "chicken",
+    "description": "Our crispy fried chicken added with soft steamed rice.",
+    "rating": "5",
+    "price": "110",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://toppng.com/uploads/preview/fried-chicken-with-rice-png-11552946683lzktbsmvbv.png"
+  },
+  {
+    "name": "Wings",
+    "category": "chicken",
+    "description": "Expertly fried wingettes and drumettes – Crispy on the outside and juicy on the inside.",
+    "rating": "5",
+    "price": "240",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1153&q=80"
+  },
+
+  {
+    "name": "Bolognese",
+    "category": "Pasta",
+    "description": "Spaghetti cooked with a thick and rich meat sauce.",
+    "rating": "5",
+    "price": "110",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://pixabay.com/photos/spaghetti-noodles-bolognese-1987454/"
+  },
+  {
+    "name": "Carbonara",
+    "category": "Pasta",
+    "description": "Cream sauce, bacon, egg, onion, and garlic.",
+    "rating": "5",
+    "price": "110",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://unsplash.com/photos/-5FECW242og"
+  },
+  {
+    "name": "Lasagna",
+    "category": "Pasta",
+    "description": "Lean ground beef, ricotta cheese, basil and tomato sauce.",
+    "rating": "5",
+    "price": "110",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://pixabay.com/photos/food-lasagna-pasta-dish-cuisine-5987888/"
+  },
+  {
+    "name": "Mac n Cheese",
+    "category": "Pasta",
+    "description": "Macaroni with creamy cheese sauce and bacon bits.",
+    "rating": "5",
+    "price": "110",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://www.pexels.com/photo/close-up-photography-of-baked-mac-806357/"
+  },
+  {
+    "name": "Pesto",
+    "category": "Pasta",
+    "description": "Basil pesto infused blanco cream sauce.",
+    "rating": "5",
+    "price": "110",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://unsplash.com/photos/jE2fHnuo2lg"
+  },
+  {
+    "name": "Marinara",
+    "category": "Pasta",
+    "description": "Prawns, scallops, calamari, mussel and crab meat marinated. Served with olive oil and garlic.",
+    "rating": "5",
+    "price": "110",
+    "date": "new Date(2022, random, random)",
+    "in-stock": "true",
+    "favorite": "true",
+    "img": "https://unsplash.com/photos/l728d7AJnXM"
+  }
+]

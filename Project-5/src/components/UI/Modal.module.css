@@ -1,0 +1,48 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  /* background-color: antiquewhite; */
+  z-index: 10;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 32rem;
+  height: 100vh;
+
+  /* width: 80rem;
+  height: 48rem; */
+
+  background-color: #181a1b;
+  /* background-color: #f08c00;
+  background-color: #e67700; */
+  color: #343a40;
+
+  z-index: 100;
+
+  animation: show 200ms ease-in-out;
+
+  /* border-radius: 18px; */
+}
+
+.modal .close {
+  animation: close 200ms ease-in-out;
+}
+
+@keyframes show {
+  from {
+    /* opacity: 1; */
+    transform: translateX(-100%);
+  }
+  to {
+    /* opacity: 1; */
+    transform: translateX(0);
+  }
+}
