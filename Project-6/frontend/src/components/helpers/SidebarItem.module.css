@@ -1,0 +1,96 @@
+.li {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  padding: 0.8rem 2.8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+
+  letter-spacing: 0.4px;
+
+  border-left: 5px solid transparent;
+
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title:hover {
+  background-color: #495057;
+}
+
+.title.dashboard .icon {
+  color: #adb5bd;
+}
+.title.activities .icon {
+  color: #228be6;
+}
+.title.connections .icon {
+  color: #ffa94d;
+}
+.title.records .icon {
+  color: #94d82d;
+}
+
+.title.current {
+  /* border-left: 4px solid #5c7cfa; */
+  border-left: 5px solid #dee2e6;
+}
+
+.title .chevron {
+  display: flex;
+  align-items: center;
+  color: #dee2e6;
+  margin-left: auto;
+}
+
+.open .chevron ion-icon {
+  transform: rotate(-180deg);
+}
+
+.li div .chevron ion-icon {
+  transition: all 300ms ease-in-out;
+  --ionicon-stroke-width: 64px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+}
+
+.open .accordion {
+  opacity: 1;
+  max-height: 99999px;
+}
+
+.sub-group {
+  padding: 0.6rem 7.2rem;
+
+  font-size: 1.4rem;
+
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+}
+
+.sub-group__link:last-child {
+  margin-bottom: 1rem;
+}
+
+.sub-group:hover {
+  background-color: #343a40;
+}

@@ -1,0 +1,54 @@
+.container {
+  margin: 6.4rem auto;
+
+  max-width: 120rem;
+
+  display: flex;
+
+  gap: 2.8rem;
+}
+
+.container button {
+  padding: 1.8rem;
+  border: none;
+
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  color: #f1f3f5;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.hr {
+  background-color: #f06595;
+}
+
+.sleep {
+  background-color: #845ef7;
+}
+
+.fluids {
+  background-color: #339af0;
+}
+
+.steps {
+  background-color: #ff922b;
+}
+
+.hr:hover {
+  background-color: #e64980;
+}
+
+.sleep:hover {
+  background-color: #7048e8;
+}
+
+.fluids:hover {
+  background-color: #1c7ed6;
+}
+
+.steps:hover {
+  background-color: #f76707;
+}

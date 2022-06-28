@@ -1,0 +1,27 @@
+.section {
+  margin: 3.6rem auto 0 auto;
+  width: 100%;
+  max-width: 135rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 3.8rem;
+
+  /* background-color: #f8f9fa; */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2.8rem;
+}
+
+.content .title {
+  /* padding-left: 0.8rem; */
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  text-transform: capitalize;
+}
