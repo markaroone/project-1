@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './SidebarItem.module.css';
+import SidebarContext from '../../context/sidebar-context';
 
 const SidebarItem = ({ item }) => {
-  const [expandAccordion, setExpandAccordion] = useState(false);
+  const sidebarCtx = useContext(SidebarContext);
+
+  // const [expandAccordion, setExpandAccordion] = useState(false);
   const { pathname } = useLocation();
 
   let current;
@@ -12,12 +15,36 @@ const SidebarItem = ({ item }) => {
   else
     current =
       item.link.slice(1).split('/')[0] === pathname.slice(1).split('/')[0];
+  const linkToCheck = item.link.slice(1);
 
   const toggleAccordion = () => {
-    if (item.subGroup) {
-      setExpandAccordion(!expandAccordion);
+    // if (item.subGroup) {
+    //   setExpandAccordion(!expandAccordion);
+    // }
+
+    if (linkToCheck === 'activities' && sidebarCtx.isActivitiesExpanded) {
+      sidebarCtx.collapseActivities();
+    } else if (
+      linkToCheck === 'activities' &&
+      !sidebarCtx.isActivitiesExpanded
+    ) {
+      sidebarCtx.expandActivities();
+    } else if (
+      linkToCheck === 'health-stats' &&
+      sidebarCtx.isHealthStatsExpanded
+    ) {
+      sidebarCtx.collapseHealthStats();
+    } else if (
+      linkToCheck === 'health-stats' &&
+      !sidebarCtx.isHealthStatsExpanded
+    ) {
+      sidebarCtx.expandHealthStats();
     }
   };
+
+  const expandAccordion =
+    (sidebarCtx.isHealthStatsExpanded && linkToCheck === 'health-stats') ||
+    (sidebarCtx.isActivitiesExpanded && linkToCheck === 'activities');
 
   return (
     <li

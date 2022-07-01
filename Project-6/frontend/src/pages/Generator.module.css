@@ -10,7 +10,22 @@
   gap: 2.8rem;
 }
 
-.container button {
+.container form {
+  display: flex;
+  gap: 5.6rem;
+}
+
+.btns {
+  max-width: 120rem;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 2.8rem;
+}
+
+.btns button {
   padding: 1.8rem;
   border: none;
 
@@ -53,4 +68,14 @@
 
 .steps:hover {
   background-color: #f76707;
+}
+
+.dateInput,
+.numberInput {
+  padding: 0.4rem 1rem;
+
+  font-family: inherit;
+  font-size: 2rem;
+
+  border: 2px solid #ced4da;
 }

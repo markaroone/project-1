@@ -56,7 +56,6 @@ const DailyHydrationGraph = () => {
   }, []);
 
   const bodyTooltip = (tooltipItems) => {
-    console.log(tooltipItems);
     return `${tooltipItems.raw} mL`;
   };
   const options = {

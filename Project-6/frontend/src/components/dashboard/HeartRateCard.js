@@ -10,7 +10,7 @@ const HeartRateCard = () => {
     const {
       data: { data },
     } = await axios.get(
-      `http://localhost:8000/api/v1/heart-rate-records/62ac627a6ca528974b72554d?sort=-date&date[lt]=${end}&date[gt]=${start}`
+      `http://localhost:8000/api/v1/heart-rate-records/62ac627a6ca528974b72554d?sort=-date&date[lte]=${end}&date[gte]=${start}`
     );
 
     const dataToSet = data.length > 0 ? data.map((el) => el.result) : [];
