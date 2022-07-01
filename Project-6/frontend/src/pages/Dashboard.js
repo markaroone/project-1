@@ -4,6 +4,8 @@ import {
   RecentActivity,
   DailyStatistics,
   TotalActivitiesPerDay,
+  DailyStepsGraph,
+  DailyHydrationGraph,
 } from '../components/dashboard/index';
 import { Footer } from '../components';
 import styles from './Dashboard.module.css';
@@ -81,13 +83,17 @@ const Dashboard = () => {
           </div>
 
           <div className={styles.content}>
-            <p className={styles.title}>weekly total activities</p>
-            <TotalActivitiesPerDay />
+            <p className={styles.title}>Daily Steps Graph</p>
+            <DailyStepsGraph />
+          </div>
+
+          <div className={styles.content}>
+            <p className={styles.title}>Daily Hydration Graph</p>
+            <DailyHydrationGraph />
           </div>
         </div>
-
-        <Footer />
       </section>
+      <Footer />
     </GeneralPageTemplate>
   );
 };

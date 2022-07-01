@@ -1,6 +1,8 @@
 .section {
   width: 100%;
-  height: calc(100vh - 7.2rem);
+  min-height: calc(100vh - 7.2rem);
+
+  padding-bottom: 8rem;
   display: flex;
   flex-direction: column;
   /* max-width: 135rem; */
@@ -19,8 +21,8 @@
   margin: 3.6rem auto 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 3.6rem;
-  row-gap: 5.6rem;
+  column-gap: 3.8rem;
+  row-gap: 6.4rem;
 }
 
 .content {
