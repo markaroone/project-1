@@ -4,6 +4,8 @@ import getCoordinates from './getCoordinates';
 import getDateRangeToday from './getDateRangeToday';
 import getDateRange from './getDateRange';
 import getDateToday from './getDateToday';
+import getYesterdayAndToday from './getYesterdayAndToday';
+import getStartEndToday from './getStartEndToday';
 
 export {
   greetingMaker,
@@ -12,4 +14,6 @@ export {
   getDateRangeToday,
   getDateRange,
   getDateToday,
+  getYesterdayAndToday,
+  getStartEndToday,
 };

@@ -1,0 +1,45 @@
+.bar {
+  display: grid;
+  padding: 0 1.6rem;
+  grid-template-columns: 1.1fr 2.9fr 1fr 1fr 1fr 1fr 1fr;
+  /* gap: 2.8rem; */
+
+  justify-items: flex-start;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  color: #868e96;
+}
+
+.bar div button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
+  color: inherit;
+  background-color: transparent;
+
+  text-transform: capitalize;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+.bar button span {
+  display: flex;
+}
+
+.date {
+  /* justify-self: flex-end; */
+  /* padding-right: 4.2rem; */
+  justify-self: center;
+}
+
+.title {
+  padding-left: 2.4rem;
+}

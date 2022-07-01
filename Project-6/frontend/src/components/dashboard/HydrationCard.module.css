@@ -69,6 +69,7 @@
   border-radius: 50%;
 
   background-color: #dee2e6;
+
   color: #868e96;
 
   cursor: pointer;
@@ -114,6 +115,7 @@
 
 .footer button {
   display: flex;
+  align-items: center;
 
   padding: 0.2rem 0.4rem 0.2rem 0.6rem;
 
@@ -129,12 +131,15 @@
   cursor: pointer;
 
   color: #868e96;
-  /* color: #f8f9fa; */
+
+  background-color: #3bc9db;
+  color: #f8f9fa;
 }
 
 .footer button:hover {
   /* color: #495057; */
   background-color: #ced4da;
+  background-color: #66d9e8;
 }
 
 .footer button span {

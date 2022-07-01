@@ -1,31 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import styles from './HeartRateCard.module.css';
 import axios from 'axios';
-import { getDateRangeToday } from '../../functions';
+import { getStartEndToday } from '../../functions';
 
 const HeartRateCard = () => {
   const getHeartRateData = async () => {
-    const dateRangeToday = getDateRangeToday();
+    const { start, end } = getStartEndToday();
 
     const {
       data: { data },
     } = await axios.get(
-      `http://localhost:8000/api/v1/heart-rate-records/62ac627a6ca528974b72554d?sort=-date&limit=2&date[lt]=${dateRangeToday[1]}&wakeUpDate[gt]=${dateRangeToday[0]}`
+      `http://localhost:8000/api/v1/heart-rate-records/62ac627a6ca528974b72554d?sort=-date&date[lt]=${end}&date[gt]=${start}`
     );
 
-    const heartRateArr = data.map((el) => el.result);
-    const difference = heartRateArr[0] - heartRateArr[1];
+    const dataToSet = data.length > 0 ? data.map((el) => el.result) : [];
 
-    setHeartRateData({
-      arr: heartRateArr,
-      difference,
-    });
+    setHeartRateData(dataToSet);
   };
 
-  const [heartRateData, setHeartRateData] = useState({
-    arr: ['--', '--'],
-    difference: null,
-  });
+  const [heartRateData, setHeartRateData] = useState();
 
   useEffect(() => {
     getHeartRateData();
@@ -41,36 +34,30 @@ const HeartRateCard = () => {
       </div>
 
       <div className={styles.value}>
-        <p>{heartRateData.arr[0]}</p>
+        <p>{heartRateData && heartRateData[0] ? heartRateData[0] : '--'}</p>
         <small>bpm</small>
       </div>
 
       <div className={styles.footer}>
-        {!heartRateData.difference && (
-          <div className={styles.difference}>
-            <p>
-              -- &nbsp;<span>bpm</span>
-            </p>
-          </div>
-        )}
-
-        {heartRateData.difference && (
-          <div className={styles.difference}>
+        <div className={styles.difference}>
+          {heartRateData && heartRateData.length > 1 && (
             <i>
               {
                 <ion-icon
                   name={`caret-${
-                    heartRateData.difference > 0 ? 'up' : 'down'
+                    heartRateData[0] - heartRateData[1] > 0 ? 'up' : 'down'
                   }-circle-sharp`}
                 ></ion-icon>
               }
             </i>
-            <p>
-              {Math.abs(heartRateData.arr[1])}
-              &nbsp;<span>bpm</span>
-            </p>
-          </div>
-        )}
+          )}
+          <p>
+            {heartRateData && heartRateData[1]
+              ? Math.abs(heartRateData[1])
+              : '--'}
+            &nbsp;<span>bpm</span>
+          </p>
+        </div>
 
         <button>
           See data&nbsp;

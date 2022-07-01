@@ -4,6 +4,7 @@ import HeartRateCard from './HeartRateCard';
 import SleepCard from './SleepCard';
 import StepsCard from './StepsCard';
 import HydrationCard from './HydrationCard';
+import TotalActivitiesPerDay from './TotalActivitiesPerDay';
 
 export {
   RecentActivity,
@@ -12,4 +13,5 @@ export {
   SleepCard,
   StepsCard,
   HydrationCard,
+  TotalActivitiesPerDay,
 };

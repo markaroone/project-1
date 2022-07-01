@@ -42,3 +42,11 @@ a:visited {
 li {
   list-style: none;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}

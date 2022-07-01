@@ -1,0 +1,11 @@
+.section {
+  width: 100%;
+  height: calc(100vh - 7.2rem - 5.6rem);
+
+  padding: 3.4rem 3.4rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3.4rem;
+}

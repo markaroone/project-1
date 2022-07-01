@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import moment from 'moment';
 import { GeneralPageTemplate } from '../components/ui/index';
 import styles from './Generator.module.css';
 import {
@@ -15,7 +16,7 @@ import {
 
 const Generator = () => {
   const postNewSleepRecord = async () => {
-    const data = await sleepGenerator('2022-06-28', '62ac627a6ca528974b72554d');
+    const data = await sleepGenerator('2022-06-27', '62ac627a6ca528974b72554d');
 
     const result = await axios.post(
       'http://localhost:8000/api/v1/sleep-records',
@@ -27,7 +28,7 @@ const Generator = () => {
 
   const postNewHeartRateRecord = async () => {
     const data = await heartRateRecordGenerator(
-      '2022-06-28',
+      '2022-06-29',
       '62ac627a6ca528974b72554d'
     );
 
@@ -40,18 +41,18 @@ const Generator = () => {
   };
 
   const postNewStepsRecord = async () => {
-    const data = stepsGenerator('2022-06-20', '62ac627a6ca528974b72554d');
+    const data = stepsGenerator('2022-06-29', '62ac627a6ca528974b72554d');
 
     const data2 = [];
 
     for (let i = 20; i < 29; i++)
       data2.push(stepsGenerator(`2022-06-${i}`, '62ac627a6ca528974b72554d'));
 
-    console.log(data2);
+    console.log(data);
 
     const results = await axios.post(
       'http://localhost:8000/api/v1/step-records',
-      data2
+      data
     );
 
     console.log(results);
@@ -101,7 +102,7 @@ const Generator = () => {
   };
 
   const postNewWeightRecord = async () => {
-    const data = weightGenerator('2022-05-11', 71, '62ac627a6ca528974b72554d');
+    const data = weightGenerator('2021-04-21', 71, '62ac627a6ca528974b72554d');
 
     const result = await axios.post(
       'http://localhost:8000/api/v1/weight-records',
@@ -119,6 +120,22 @@ const Generator = () => {
     );
 
     console.log(result);
+  };
+
+  const testMoment = () => {
+    const today = moment().weekday(1);
+    const weekStart = today.startOf('week').toString();
+    const weekEnd = today.endOf('week').toString();
+
+    const dayStart = moment().startOf('day').toISOString();
+    const dayEnd = moment().endOf('day').toISOString();
+
+    console.log(dayStart);
+    console.log(dayEnd);
+    console.log(moment().endOf('day').toString());
+
+    // console.log(weekStart);
+    // console.log(weekEnd);
   };
 
   return (
@@ -154,6 +171,10 @@ const Generator = () => {
 
         <button className={styles.steps} onClick={updateWeightRecord}>
           update weight generator
+        </button>
+
+        <button className={styles.steps} onClick={testMoment}>
+          test moment
         </button>
       </div>
     </GeneralPageTemplate>

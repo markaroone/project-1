@@ -92,6 +92,7 @@
 
 .footer button {
   display: flex;
+  align-items: center;
 
   padding: 0.2rem 0.4rem 0.2rem 0.6rem;
 
@@ -100,6 +101,8 @@
 
   background-color: transparent;
   background-color: #dee2e6;
+  background-color: #c0eb75;
+  background-color: #94d82d;
 
   font-family: inherit;
   font-weight: 600;
@@ -107,12 +110,13 @@
   cursor: pointer;
 
   color: #868e96;
-  /* color: #f8f9fa; */
+  color: #f8f9fa;
 }
 
 .footer button:hover {
   /* color: #495057; */
   background-color: #ced4da;
+  background-color: #a9e34b;
 }
 
 .footer button span {

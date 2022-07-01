@@ -1,41 +1,88 @@
 import React, { useState, useEffect } from 'react';
 import styles from './HydrationCard.module.css';
 import axios from 'axios';
-import { getDateRange } from '../../functions';
+import { getStartEndToday } from '../../functions';
 
 const HydrationCard = () => {
   const getHydrationData = async () => {
-    const {
-      data: { data },
-    } = await axios.get(
-      `http://localhost:8000/api/v1/hydration-records/62ac627a6ca528974b72554d?sort=-date&limit=1`
-    );
-    setHydrationData(data[0]);
+    try {
+      const { start, end } = getStartEndToday();
+
+      const {
+        data: { data },
+      } = await axios.get(
+        `http://localhost:8000/api/v1/hydration-records/62ac627a6ca528974b72554d?sort=-date&limit=1&date[gte]=${start}&date[lte]=${end}`
+      );
+
+      let dataToSend = {
+        id: null,
+        amount: 0,
+      };
+
+      if (!data.length) {
+        const now = new Date();
+
+        const responseData = await axios.post(
+          `http://localhost:8000/api/v1/hydration-records`,
+          {
+            userId: '62ac627a6ca528974b72554d',
+            id: now.toISOString().slice(0, 10),
+            date: now,
+            amount: 0,
+          }
+        );
+      }
+
+      if (data.length > 0) {
+        dataToSend.id = data[0]._id;
+        dataToSend.amount = data[0].amount;
+      }
+
+      setHydrationData(dataToSend);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   const increaseHydrationData = async () => {
+    /* 
+    TODO: Create data only when increase/decrease button is pressed so that no unnecessary data is created.
+    */
     try {
+      if (!hydrationData) return;
+
       await axios.patch(
-        `http://localhost:8000/api/v1/hydration-records/${hydrationData._id}`,
+        `http://localhost:8000/api/v1/hydration-records/${hydrationData.id}`,
         { amount: hydrationData.amount + 250 }
       );
 
-      getHydrationData();
+      setHydrationData({
+        ...hydrationData,
+        amount: hydrationData.amount + 250,
+      });
     } catch (err) {
       console.error(err);
     }
   };
 
   const decreaseHydrationData = async () => {
+    /* 
+    TODO: Create data only when increase/decrease button is pressed so that no unnecessary data is created.
+    */
     try {
-      if (hydrationData.amount < 250) return;
+      if (!hydrationData || hydrationData.amount < 250) return;
+
+      const newAmount = hydrationData.amount - 250;
 
       await axios.patch(
-        `http://localhost:8000/api/v1/hydration-records/${hydrationData._id}`,
-        { amount: hydrationData.amount - 250 }
+        `http://localhost:8000/api/v1/hydration-records/${hydrationData.id}`,
+        { amount: newAmount }
       );
 
-      getHydrationData();
+      setHydrationData({
+        ...hydrationData,
+        amount: newAmount,
+      });
     } catch (err) {
       console.error(err);
     }
@@ -44,7 +91,7 @@ const HydrationCard = () => {
   const [hydrationData, setHydrationData] = useState();
 
   useEffect(() => {
-    getHydrationData();
+    getHydrationData(hydrationData);
   }, []);
 
   return (

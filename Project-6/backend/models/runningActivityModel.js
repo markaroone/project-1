@@ -7,6 +7,7 @@ const runningSchema = new Schema({
   activityType: String,
   name: String,
   notes: String,
+  favorite: Boolean,
   date: {
     start: String,
     end: String,

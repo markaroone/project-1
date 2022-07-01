@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 2.8rem;
+
+  font-size: 1.4rem;
+  font-weight: 300;
+
+  text-transform: uppercase;
+
+  color: #495057;
+}
+
+.time div {
+  margin-left: auto;
+  display: flex;
+  gap: 1.4rem;
+}
+
+.time div > button {
+  display: flex;
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+
+  font-size: 1.8rem;
+
+  cursor: pointer;
+
+  color: #868e96;
+}
+
+.type {
+  color: #adb5bd;
+  color: #5c7cfa;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.name-container {
+  display: flex;
+  align-items: center;
+
+  gap: 1.8rem;
+}
+
+.name-container i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 6.4rem;
+  height: 6.4rem;
+  font-size: 4.2rem;
+
+  color: #495057;
+  background-color: #f1f3f5;
+
+  border: 2px solid #ced4da;
+  border-radius: 50%;
+}
+
+.name {
+  display: flex;
+
+  font-size: 2.8rem;
+
+  gap: 1rem;
+}
+
+.name form {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.name form input {
+  padding: 0 0.8rem;
+
+  width: fit-content;
+
+  font-family: inherit;
+  font-size: 2.8rem;
+
+  color: #495057;
+
+  border: 1.4px solid #dee2e6;
+  border-radius: 6px;
+}
+
+.name form input:focus {
+  outline: 2px solid #ced4da;
+}
+
+.name form div {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.name button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background-color: transparent;
+  color: #868e96;
+
+  font-size: 1.8rem;
+}
+
+.name .form-btn {
+  font-size: 2.8rem;
+}
+
+.name button:hover {
+  color: #495057;
+}
+
+.gear {
+  display: flex;
+  gap: 1.8rem;
+
+  font-size: 1.2rem;
+  font-weight: 300;
+
+  color: #495057;
+}
+
+.gear p > span {
+  font-weight: 500;
+}

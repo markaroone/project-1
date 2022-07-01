@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { GeneralPageTemplate, DashboardCard } from '../components/ui/index';
-import { RecentActivity, DailyStatistics } from '../components/dashboard/index';
+import {
+  RecentActivity,
+  DailyStatistics,
+  TotalActivitiesPerDay,
+} from '../components/dashboard/index';
+import { Footer } from '../components';
 import styles from './Dashboard.module.css';
 import axios from 'axios';
 
@@ -13,22 +18,22 @@ const Dashboard = () => {
   const getData = async () => {
     const dataArr = await Promise.all([
       axios.get(
-        `http://localhost:8000/api/v1/activities/cycling-records/${userId}?sort=activityId&limit=1`
+        `http://localhost:8000/api/v1/activities/cycling-records?userId[eq]=${userId}&sort=activityId&limit=1`
       ),
       axios.get(
-        `http://localhost:8000/api/v1/activities/running-records/${userId}?sort=activityId&limit=1`
+        `http://localhost:8000/api/v1/activities/running-records?userId[eq]=${userId}&sort=activityId&limit=1`
       ),
     ]);
 
     const [
       {
         data: {
-          data: { activities: cyclingData },
+          data: { data: cyclingData },
         },
       },
       {
         data: {
-          data: { activities: runningData },
+          data: { data: runningData },
         },
       },
     ] = dataArr;
@@ -51,16 +56,17 @@ const Dashboard = () => {
   return (
     <GeneralPageTemplate>
       <section className={styles.section}>
-        <div className={styles.content}>
-          <p className={styles.title}>recent activity</p>
-          <DashboardCard>
-            {recentCyclingData && (
-              <RecentActivity activity={recentCyclingData} />
-            )}
-          </DashboardCard>
-        </div>
+        <div className={styles.body}>
+          <div className={styles.content}>
+            <p className={styles.title}>recent activity</p>
+            <DashboardCard>
+              {recentCyclingData && (
+                <RecentActivity activity={recentCyclingData} />
+              )}
+            </DashboardCard>
+          </div>
 
-        {/* <div className={styles.content}>
+          {/* <div className={styles.content}>
           <p className={styles.title}>recent activity</p>
           <DashboardCard>
             {recentRunningData && (
@@ -69,10 +75,18 @@ const Dashboard = () => {
           </DashboardCard>
         </div> */}
 
-        <div className={styles.content}>
-          <p className={styles.title}>daily statistics</p>
-          <DailyStatistics />
+          <div className={styles.content}>
+            <p className={styles.title}>daily statistics</p>
+            <DailyStatistics />
+          </div>
+
+          <div className={styles.content}>
+            <p className={styles.title}>weekly total activities</p>
+            <TotalActivitiesPerDay />
+          </div>
         </div>
+
+        <Footer />
       </section>
     </GeneralPageTemplate>
   );

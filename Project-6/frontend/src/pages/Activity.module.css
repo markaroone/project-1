@@ -1,0 +1,43 @@
+.section {
+  width: 100%;
+  min-height: calc(100vh - 7.2rem - 5.6rem);
+
+  padding: 3rem 3rem 4.8rem 3rem;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  gap: 1rem;
+}
+
+.left,
+.right {
+  padding: 3.2rem 3.2rem;
+
+  background-color: #f8f9fa;
+
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  gap: 4.8rem;
+}
+
+.left .graph-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
+.right {
+  padding-bottom: 4.8rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}

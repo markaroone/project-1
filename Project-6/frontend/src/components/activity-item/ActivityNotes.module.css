@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
+.container h5 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.container textarea {
+  padding: 1.2rem;
+  height: 12rem;
+  resize: none;
+
+  font-family: inherit;
+  font-weight: 500;
+
+  border: 1.4px solid #dee2e6;
+  border-radius: 6px;
+}
+
+.container div {
+  padding: 1.2rem;
+  height: 12rem;
+  height: fit-content;
+  font-size: 1.4rem;
+}
+
+.container textarea:focus {
+  outline: 2px solid #ced4da;
+}
+
+.container textarea::placeholder {
+  color: #868e96;
+}
+
+.save {
+  width: 5.6rem;
+
+  padding: 0.4rem 1.2rem;
+
+  align-self: flex-end;
+
+  font-family: inherit;
+  font-weight: 500;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #5c7cfa;
+  color: #f8f9fa;
+}
+
+.save:hover {
+  background-color: #4263eb;
+}
+
+.edit {
+  width: 5.6rem;
+
+  padding: 0.4rem 1.2rem;
+
+  align-self: flex-end;
+
+  font-family: inherit;
+  font-weight: 500;
+
+  border: none;
+
+  background-color: transparent;
+  color: #5c7cfa;
+}
+
+.edit:hover {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+}

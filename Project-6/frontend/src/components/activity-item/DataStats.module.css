@@ -1,0 +1,48 @@
+.container {
+  padding: 0 2.2rem 2.8rem 2.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
+.container h5 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2.8rem;
+}
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.8rem;
+}
+
+.data-container h6 {
+  margin-bottom: -0.8rem;
+
+  max-width: 70%;
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  border-bottom: 1px solid #adb5bd;
+
+  color: #868e96;
+}
+
+.data-container div {
+  display: flex;
+  flex-direction: column;
+}
+
+.data-container div small {
+  margin-top: -0.2rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+}

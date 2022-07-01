@@ -1,0 +1,44 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.2rem;
+}
+
+.container button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background-color: transparent;
+
+  font-size: 1.6rem;
+
+  color: #868e96;
+}
+
+.container button:hover {
+  color: #495057;
+}
+
+.heart {
+  margin-right: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.heart button {
+  color: #c2255c;
+}
+
+/* .heart button ion-icon {
+  --ionicon-stroke-width: 56px;
+} */
+
+.heart small {
+  font-size: 1.2rem;
+  color: #868e96;
+}

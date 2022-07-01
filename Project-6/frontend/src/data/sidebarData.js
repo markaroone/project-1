@@ -43,6 +43,10 @@ const data = [
           name: 'cycling',
           link: '/activities/cycling',
         },
+        {
+          name: 'favorites',
+          link: '/activities/favorites',
+        },
       ],
       group: 'activities',
     },

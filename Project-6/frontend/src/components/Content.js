@@ -6,9 +6,7 @@ const Content = ({ children }) => {
   return (
     <section className={styles.section}>
       <Header />
-      <div>{children}</div>
-
-      {/* <Footer /> */}
+      <div className={styles.children}>{children}</div>
     </section>
   );
 };

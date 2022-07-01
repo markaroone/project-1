@@ -13,9 +13,13 @@ class APIFeatures {
 
     // Advanced filtering
     let queryStr = JSON.stringify(queryObj);
+
+    console.log(queryStr);
     queryStr = JSON.parse(
-      queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`)
+      queryStr.replace(/\b(gte|gt|lte|lt|ne|eq)\b/g, (match) => `$${match}`)
     );
+
+    console.log(queryStr);
 
     this.query = this.query.find(queryStr);
     // this.query = this.query.find(queryObj); -> You can use this directly provided that you included '$' in the query

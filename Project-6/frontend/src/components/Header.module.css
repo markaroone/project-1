@@ -1,5 +1,5 @@
 .header {
-  height: 7.2rem;
+  min-height: 7.2rem;
   /* border-bottom: 1px solid #868e96; */
   background-color: #f8f9fa;
 

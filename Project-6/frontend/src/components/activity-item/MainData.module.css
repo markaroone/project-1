@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  max-width: 100rem;
+  padding: 1.8rem 2.8rem 0;
+  align-self: center;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.container div {
+  display: flex;
+  flex-direction: column;
+}
+
+.container p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.container small {
+  font-size: 1.2rem;
+  margin-top: -0.6rem;
+  color: #495057;
+}

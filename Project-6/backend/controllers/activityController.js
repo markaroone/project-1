@@ -35,17 +35,16 @@ exports.getAllActivities = async (request, response, next) => {
   response.status(200).json({
     status: 'success',
     results: data.length,
-    data,
+    data: {
+      data,
+    },
   });
 };
 
 exports.getUserActivities = async (request, response, next) => {
   const model = modelToUse(request);
 
-  const features = new APIFeatures(
-    model.find({ userId: request.params.id }),
-    request.query
-  )
+  const features = new APIFeatures(model.find(), request.query)
     .filter()
     .sort()
     .limitFields()
@@ -57,7 +56,44 @@ exports.getUserActivities = async (request, response, next) => {
     status: 'success',
     results: activities.length,
     data: {
-      activities,
+      data: activities,
+    },
+  });
+};
+
+exports.getActivity = async (request, response, next) => {
+  const model = modelToUse(request);
+
+  const features = new APIFeatures(
+    model.findById(request.params.id),
+    request.query
+  )
+    .filter()
+    .sort()
+    .limitFields()
+    .paginate();
+
+  const data = await features.query;
+
+  response.status(200).json({
+    status: 'success',
+    data: {
+      data,
+    },
+  });
+};
+
+exports.updateActivity = async (request, response, next) => {
+  const model = modelToUse(request);
+
+  const data = await model.findByIdAndUpdate(request.params.id, request.body, {
+    new: true,
+  });
+
+  response.status(200).json({
+    status: 'success',
+    data: {
+      data,
     },
   });
 };
@@ -85,6 +121,33 @@ exports.getActivityWithDates = async (request, response, next) => {
     results: activities.length,
     data: {
       activities,
+    },
+  });
+};
+
+exports.getAllUserSportsActivities = async (request, response, next) => {
+  const runningFeatures = new APIFeatures(RunningActivity.find(), request.query)
+    .filter()
+    .sort()
+    .limitFields()
+    .paginate();
+
+  const cyclingFeatures = new APIFeatures(CyclingActivity.find(), request.query)
+    .filter()
+    .sort()
+    .limitFields()
+    .paginate();
+
+  const runningData = await runningFeatures.query;
+  const cyclingData = await cyclingFeatures.query;
+
+  data = [...cyclingData, ...runningData];
+
+  response.status(200).json({
+    status: 'success',
+    results: data.length,
+    data: {
+      data,
     },
   });
 };
