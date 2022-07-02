@@ -35,7 +35,7 @@ const ActivityNotes = ({ data }) => {
   };
 
   const onHideTextArea = () => {
-    setTimeout(setIsEditing(false), 500);
+    setTimeout(setIsEditing(false), 100);
   };
 
   return (
