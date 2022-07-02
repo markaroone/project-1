@@ -19,18 +19,22 @@ const HydrationCard = () => {
         amount: 0,
       };
 
-      if (!data.length) {
+      if (data.length === 0) {
         const now = new Date();
 
-        const responseData = await axios.post(
-          `http://localhost:8000/api/v1/hydration-records`,
-          {
-            userId: '62ac627a6ca528974b72554d',
-            id: now.toISOString().slice(0, 10),
-            date: now,
-            amount: 0,
-          }
-        );
+        const {
+          data: { data: responseData },
+        } = await axios.post(`http://localhost:8000/api/v1/hydration-records`, {
+          userId: '62ac627a6ca528974b72554d',
+          id: now.toISOString().slice(0, 10),
+          date: now,
+          amount: 0,
+        });
+
+        console.log(responseData._id);
+
+        dataToSend.id = responseData._id;
+        dataToSend.amount = 0;
       }
 
       if (data.length > 0) {
@@ -91,7 +95,9 @@ const HydrationCard = () => {
   const [hydrationData, setHydrationData] = useState();
 
   useEffect(() => {
-    getHydrationData(hydrationData);
+    return () => {
+      getHydrationData(hydrationData);
+    };
   }, []);
 
   return (
