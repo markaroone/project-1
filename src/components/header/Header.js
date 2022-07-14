@@ -1,6 +1,6 @@
 import React from 'react';
 import { Logo } from '../index';
-import { Navigation, Socials } from './index';
+import Navigation from './Navigation';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -8,7 +8,8 @@ const Header = () => {
     <header className={styles.header}>
       <Logo />
       <Navigation />
-      <Socials />
+
+      <button>Resume</button>
     </header>
   );
 };

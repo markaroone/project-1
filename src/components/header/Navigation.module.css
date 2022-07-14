@@ -1,11 +1,23 @@
 .nav {
+  margin-left: 7.2rem;
+
   display: flex;
   align-items: center;
 
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav ul {
   display: flex;
-  gap: 4.2rem;
+  gap: 5.2rem;
+}
+
+.nav a:link,
+.nav a:visited {
+  color: #343a40;
+  transition: 200ms;
+}
+
+.nav a:hover {
+  color: #15aabf;
 }

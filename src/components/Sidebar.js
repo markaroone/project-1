@@ -1,16 +1,9 @@
 import React from 'react';
-import styles from './Socials.module.css';
-import {
-  InstagramLogo,
-  LinkedinLogo,
-  GithubLogo,
-  GitlabLogo,
-  FacebookLogo,
-} from 'phosphor-react';
+import styles from './Sidebar.module.css';
 
-const Socials = () => {
+const Sidebar = () => {
   return (
-    <ul className={styles.socials}>
+    <ul className={styles.sidebar}>
       <li>
         <a href='https://instagram.com/markaroone/'>
           <InstagramLogo
@@ -44,4 +37,4 @@ const Socials = () => {
   );
 };
 
-export default Socials;
+export default Sidebar;
