@@ -1,0 +1,11 @@
+.nav {
+  display: flex;
+  align-items: center;
+
+  font-weight: 600;
+}
+
+.nav ul {
+  display: flex;
+  gap: 4.2rem;
+}
