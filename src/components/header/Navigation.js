@@ -6,17 +6,30 @@ const Navigation = () => {
   return (
     <nav className={styles.nav}>
       <ul>
-        <li>
+        {/* <li>
           <Link to='/'>Home</Link>
         </li>
         <li>
-          <Link to='/'>About</Link>
+          <Link to='/about'>About</Link>
         </li>
         <li>
-          <Link to='/'>Works</Link>
+          <Link to='/works'>Works</Link>
         </li>
         <li>
-          <Link to='/'>Contact</Link>
+          <Link to='/contact'>Contact</Link>
+        </li> */}
+
+        <li>
+          <a href='#'>Home</a>
+        </li>
+        <li>
+          <a href='#'>About</a>
+        </li>
+        <li>
+          <a href='#'>Works</a>
+        </li>
+        <li>
+          <a href='#'>Contact</a>
         </li>
       </ul>
     </nav>

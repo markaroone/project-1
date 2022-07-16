@@ -8,7 +8,6 @@ const Header = () => {
     <header className={styles.header}>
       <Logo />
       <Navigation />
-
       <button>Resume</button>
     </header>
   );
