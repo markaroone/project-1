@@ -1,0 +1,88 @@
+.menu {
+  position: fixed;
+
+  width: 100%;
+  height: 100vh;
+
+  z-index: 100;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #f8f9fa;
+}
+
+.close-menu__btn {
+  position: absolute;
+
+  top: 2.8rem;
+  right: 2.8rem;
+
+  font-size: 3.2rem;
+
+  color: #adb5bd;
+}
+
+.close-menu__btn:hover {
+  color: #495057;
+}
+
+.links {
+  padding-top: 20vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.4rem;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  color: #adb5bd;
+
+  text-transform: capitalize;
+}
+
+.socials {
+  margin-top: 18vh;
+
+  display: flex;
+  gap: clamp(1.8rem, 10vw, 4.2rem);
+}
+
+.socials ion-icon {
+  font-size: 2.8rem;
+}
+
+/* .links a:link,
+.links a:visited, */
+.socials a:link ion-icon,
+.socials a:visited ion-icon {
+  /* color: #adb5bd; */
+  color: #868e96;
+}
+
+/* .links a:hover,
+.links a:active, */
+.socials a:hover ion-icon,
+.socials a:active ion-icon {
+  color: #495057;
+}
+
+.active {
+  color: #15aabf;
+}
+
+.links .resume {
+  padding: 0.8rem 1.2rem;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  background-color: #15aabf;
+  color: #f8f9fa;
+
+  border-radius: 8px;
+}

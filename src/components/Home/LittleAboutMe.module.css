@@ -1,0 +1,62 @@
+.me {
+  padding: clamp(1.8rem, 3vw, 3.2rem);
+  width: 100%;
+  margin: 0 auto;
+  margin-top: clamp(14.8rem, 10vw, 16rem);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+.me h3 {
+  font-size: 2.8rem;
+  color: #343a40;
+}
+
+.me p {
+  padding: 0 2.4rem;
+  margin-top: clamp(1rem, 3vw, 1.8rem);
+
+  max-width: 56rem;
+
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  letter-spacing: clamp(1px, 0.05vw, 1.4px);
+  line-height: 1.4;
+
+  color: #868e96;
+}
+
+.me a:link,
+.me a:visited {
+  margin-top: clamp(1.2rem, 3vw, 1.8rem);
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  color: #ef178e;
+  color: #15aabf;
+}
+
+.me a i {
+  display: flex;
+}
+
+@media (min-width: 992px) {
+  .me {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .me p {
+    padding: 0;
+  }
+}

@@ -1,6 +1,4 @@
-import Page from './Page';
-import Logo from './Logo';
-import Header from './header/Header';
-import Footer from './Footer';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
-export { Page, Logo, Header, Footer };
+export { Header, Footer };

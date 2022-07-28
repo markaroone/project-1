@@ -1,30 +1,21 @@
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Page, Header, Footer } from './components';
-import { Home, About } from './views';
+import { Header, Footer } from './components/';
+import { Home, About, Projects, Contact, Resume } from './views/';
 import './App.css';
 
 function App() {
-  const homeEl = (
-    <Page>
-      <Home />
-    </Page>
-  );
-
-  const aboutEl = (
-    <Page>
-      <About />
-    </Page>
-  );
-
   return (
     <div className='App'>
       <Header />
-
       <Routes>
-        <Route path='/' element={homeEl} />
-        <Route path='/about' element={aboutEl} />
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/resume' element={<Resume />} />
+        <Route path='*' element={<Home />} />
       </Routes>
-
       <Footer />
     </div>
   );

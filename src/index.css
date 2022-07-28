@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
@@ -29,15 +29,19 @@ code {
 
 a:link,
 a:visited {
-  text-decoration: none;
   color: inherit;
-}
-
-li {
-  list-style: none;
+  font-family: inherit;
+  text-decoration: none;
 }
 
 button {
   font-family: inherit;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
 }
